@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+
+    // ===================== (DIMENSIONS) ===================== \\
+
+    // Panel
+    --panel-width: 400px;
+    --panel-top-left-radius: 8px;
+    --panel-top-right-radius: 8px;
+    --panel-bottom-left-radius: 8px;
+    --panel-bottom-right-radius: 8px;
+    --panel-drop-shadow: 8px 8px 10px rgba(0, 0, 0, 0.13);
+    /* --panel-height: 400px; (optional) */
+
+
+    // Panel Bar
+    --panel-bar-height: 28px;
+    --panel-bar-cursor: pointer;
+    --panel-bar-padding-left: 10px;
+    --panel-bar-padding-right: 10px;
+    --panel-bar-drop-shadow-blur: 2px;
+    --panel-bar-drop-shadow-height: 2px;
+    --panel-bar-drop-shadow-color: rgba(0, 0, 0, 0.25);
+
+
+    // Panel Title
+    --panel-title-font-size: 14px;
+    --panel-title-font-weight: normal;
+    --panel-title-font-family: Arial, Helvetica, sans-serif;
+
+    
+    // Panel Base
+    --panel-base-padding: 10px;
+
+    
+
+
+    // ===================== (COLOR) ===================== \\
+
+    // Panel Bar
+    --panel-bar-border-color: linear-gradient(#cecece, #a1a1a1);
+    --panel-bar-background-color: linear-gradient(#e0e0e0, #c9c9c9);
+
+    // Panel Title
+    --panel-title-text-color: #363636;
+
+
+    // Panel Base
+    --panel-base-border-color: #c5c5c5;
+    --panel-base-background-color: #e0e0e0;
+
+
+
+
+    // ===================== (HOVER COLOR) ===================== \\
+
+    // Panel Bar
+    --panel-bar-border-hover-color: linear-gradient(#c6c6c6, #9c9c9c);
+    --panel-bar-background-hover-color: linear-gradient(#dadada, #c2c2c2);
+
+    // Panel Title
+    --panel-title-text-hover-color: #000000;
+}
+
+* {
+    box-sizing: border-box;
+}

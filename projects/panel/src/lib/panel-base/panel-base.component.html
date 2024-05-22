@@ -1,0 +1,7 @@
+<div class="panel-base-container">
+    <div [style.height.px]="baseHeight()" class="panel-base-border">
+        <div [style.height.px]="baseHeight() - 1" class="panel-base-background">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.panel-container {
+    width: var(--panel-width);
+    height: var(--panel-height);
+    box-shadow: var(--panel-drop-shadow);
+    border-top-left-radius: var(--panel-top-left-radius);
+    border-top-right-radius: var(--panel-top-right-radius);
+    border-bottom-left-radius: var(--panel-bottom-left-radius);
+    border-bottom-right-radius: var(--panel-bottom-right-radius);
+}

@@ -1,0 +1,11 @@
+<div #container class="panel-bar-container" [ngStyle]="{'height': height}">
+   <div  class="panel-bar-border" >
+      <div class="panel-bar-background">
+         <ng-content></ng-content>
+      </div>
+   </div>
+</div>
+
+@if (hoverDisabled) {
+   <div class="no-hover" [ngStyle]="{'height': height}"></div>
+}
