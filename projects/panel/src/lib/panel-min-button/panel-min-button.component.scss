@@ -1,0 +1,58 @@
+.min-button-container {
+    user-select: none;
+    &:hover {
+        .min-button-border {
+            background: var(--panel-min-button-border-hover-color);
+        }
+
+        .min-button-background {
+            background: var(--panel-min-button-background-hover-color);
+        }
+
+        .min-button-icon {
+            color: var(--panel-min-button-icon-hover-color);
+        }
+    }
+
+    &:active {
+        .min-button-border {
+            background: var(--panel-min-button-border-active-color);
+        }
+
+        .min-button-background {
+            background: var(--panel-min-button-background-active-color);
+        }
+
+        .min-button-icon {
+            color: var(--panel-min-button-icon-active-color);
+        }
+    }
+}
+
+
+
+.min-button-border {
+    padding: 1px;
+    width: var(--panel-bar-button-width);
+    height: var(--panel-bar-button-height);
+    border-radius: var(--panel-bar-button-radius);
+    background: var(--panel-min-button-border-color);
+}
+
+
+
+.min-button-background {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--panel-min-button-background-color);
+    border-radius: calc(var(--panel-bar-button-radius) - 1px);
+}
+
+
+
+.min-button-icon {
+    color: var(--panel-min-button-icon-color);
+    font-size: var(--panel-min-button-icon-font-size);
+}

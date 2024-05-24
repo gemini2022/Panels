@@ -1,0 +1,58 @@
+.max-button-container {
+    user-select: none;
+    &:hover {
+        .max-button-border {
+            background: var(--panel-max-button-border-hover-color);
+        }
+
+        .max-button-background {
+            background: var(--panel-max-button-background-hover-color);
+        }
+
+        .max-button-icon {
+            color: var(--panel-max-button-icon-hover-color);
+        }
+    }
+
+    &:active {
+        .max-button-border {
+            background: var(--panel-max-button-border-active-color);
+        }
+
+        .max-button-background {
+            background: var(--panel-max-button-background-active-color);
+        }
+
+        .max-button-icon {
+            color: var(--panel-max-button-icon-active-color);
+        }
+    }
+}
+
+
+
+.max-button-border {
+    padding: 1px;
+    width: var(--panel-bar-button-width);
+    height: var(--panel-bar-button-height);
+    border-radius: var(--panel-bar-button-radius);
+    background: var(--panel-max-button-border-color);
+}
+
+
+
+.max-button-background {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--panel-max-button-background-color);
+    border-radius: calc(var(--panel-bar-button-radius) - 1px);
+}
+
+
+
+.max-button-icon {
+    color: var(--panel-max-button-icon-color);
+    font-size: var(--panel-max-button-icon-font-size);
+}

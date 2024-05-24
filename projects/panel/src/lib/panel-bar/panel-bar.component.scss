@@ -11,6 +11,18 @@
             background: var(--panel-bar-background-hover-color);
         }
         --panel-title-text-color: var(--panel-title-text-hover-color);
+
+        --panel-x-button-icon-color: var(--panel-x-button-icon-color-on-panel-bar-hover);
+        --panel-x-button-border-color: var(--panel-x-button-border-color-on-panel-bar-hover);
+        --panel-x-button-background-color: var(--panel-x-button-background-color-on-panel-bar-hover);
+
+        --panel-max-button-icon-color: var(--panel-max-button-icon-color-on-panel-bar-hover);
+        --panel-max-button-border-color: var(--panel-max-button-border-color-on-panel-bar-hover);
+        --panel-max-button-background-color: var(--panel-max-button-background-color-on-panel-bar-hover);
+
+        --panel-min-button-icon-color: var(--panel-min-button-icon-color-on-panel-bar-hover);
+        --panel-min-button-border-color: var(--panel-min-button-border-color-on-panel-bar-hover);
+        --panel-min-button-background-color: var(--panel-min-button-background-color-on-panel-bar-hover);
     }
 }
 

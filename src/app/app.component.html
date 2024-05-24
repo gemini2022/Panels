@@ -1,7 +1,11 @@
 <panel>
   <panel-bar>
     <panel-title>My Panel</panel-title>
-    <div style="width: 100px; height: 20px; background: orange;"></div>
+    <button-group width="80px">
+      <panel-min-button></panel-min-button>
+      <panel-max-button [icon]="maxButtonIcon"></panel-max-button>
+      <panel-x-button></panel-x-button>
+    </button-group>
   </panel-bar>
   <panel-base>
     <div style="width: 30px; height: 30px; background: orange;"></div>
