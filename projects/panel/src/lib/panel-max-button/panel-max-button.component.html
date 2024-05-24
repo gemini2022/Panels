@@ -1,4 +1,9 @@
-<div class="max-button-container" [title]="maxTooltip" (click)="clickedEvent.emit()">
+<div [title]="maxTooltip"
+     class="max-button-container"
+     [ngClass]="{'disabled': disabled()}"
+     (mousedown)="mouseDownedEvent.emit()"
+     (click)="!disabled() ? clickedEvent.emit() : null">
+
     <div class="max-button-border">
         <div class="max-button-background">
             <i class="material-symbols-outlined max-button-icon" [style.fontSize]="fontSize()">{{maxIcon}}</i>

@@ -1,6 +1,10 @@
 .min-button-container {
     user-select: none;
-    &:hover {
+    cursor: var(--panel-bar-button-cursor);
+
+    &:hover:not(.disabled) {
+        cursor: var(--panel-bar-button-hover-cursor);
+
         .min-button-border {
             background: var(--panel-min-button-border-hover-color);
         }
@@ -14,7 +18,7 @@
         }
     }
 
-    &:active {
+    &:active:not(.disabled) {
         .min-button-border {
             background: var(--panel-min-button-border-active-color);
         }
@@ -55,4 +59,22 @@
 .min-button-icon {
     color: var(--panel-min-button-icon-color);
     font-size: var(--panel-min-button-icon-font-size);
+}
+
+
+
+.disabled {
+    opacity: var(--panel-bar-button-disabled-opacity);
+
+    .min-button-border {
+        background: var(--panel-min-button-border-disabled-color);
+    }
+
+    .min-button-background {
+        background: var(--panel-min-button-background-disabled-color);
+    }
+
+    .min-button-icon {
+        color: var(--panel-min-button-icon-disabled-color);
+    }
 }

@@ -14,9 +14,10 @@
 
     /* Panel Bar */
     --panel-bar-height: 28px;
-    --panel-bar-cursor: pointer;
+    --panel-bar-cursor: default;
     --panel-bar-padding-left: 10px;
     --panel-bar-padding-right: 7px;
+    --panel-bar-hover-cursor: pointer;
     --panel-bar-drop-shadow-blur: 2px;
     --panel-bar-drop-shadow-height: 2px;
     --panel-bar-drop-shadow-color: rgba(0, 0, 0, 0.2);
@@ -27,6 +28,9 @@
     --panel-bar-button-radius: 5px;
     --panel-bar-button-width: 20px;
     --panel-bar-button-height: 20px;
+    --panel-bar-button-cursor: default;
+    --panel-bar-button-hover-cursor: pointer;
+    --panel-bar-button-disabled-opacity: 0.3;
         /* X Button */
         --panel-x-button-icon: close;
         --panel-x-button-tooltip: Close;
@@ -117,15 +121,15 @@
 
 
     /* Panel Bar Max Button */
-    --panel-max-button-icon-hover-color: rgb(70, 70, 70);
-    --panel-max-button-border-hover-color: linear-gradient(rgb(208, 208, 208), rgb(179, 179, 179));
-    --panel-max-button-background-hover-color: linear-gradient(rgb(235, 235, 235), rgb(207, 207, 207));
+    --panel-max-button-icon-hover-color: rgb(75, 75, 75);
+    --panel-max-button-border-hover-color: linear-gradient(rgb(213, 213, 213), rgb(184, 184, 184));
+    --panel-max-button-background-hover-color: linear-gradient(rgb(240, 240, 240), rgb(212, 212, 212));
 
 
     /* Panel Bar Min Button */
-    --panel-min-button-icon-hover-color: rgb(70, 70, 70);
-    --panel-min-button-border-hover-color: linear-gradient(rgb(208, 208, 208), rgb(179, 179, 179));
-    --panel-min-button-background-hover-color: linear-gradient(rgb(235, 235, 235), rgb(207, 207, 207));
+    --panel-min-button-icon-hover-color: rgb(75, 75, 75);
+    --panel-min-button-border-hover-color: linear-gradient(rgb(213, 213, 213), rgb(184, 184, 184));
+    --panel-min-button-background-hover-color: linear-gradient(rgb(240, 240, 240), rgb(212, 212, 212));
 
     
 
@@ -143,15 +147,37 @@
 
 
     /* Panel Bar Max Button */
-    --panel-max-button-icon-active-color: rgb(76, 76, 76);
-    --panel-max-button-border-active-color: linear-gradient(#d6d6d6, #b9b9b9);
-    --panel-max-button-background-active-color: linear-gradient(#f1f1f1, #d5d5d5);
+    --panel-max-button-icon-active-color: rgb(81, 81, 81);
+    --panel-max-button-border-active-color: linear-gradient(rgb(219, 219, 219), rgb(190, 190, 190));
+    --panel-max-button-background-active-color: linear-gradient(rgb(246, 246, 246), rgb(218, 218, 218));
 
 
     /* Panel Bar Min Button */
-    --panel-min-button-icon-active-color: rgb(76, 76, 76);
-    --panel-min-button-border-active-color: linear-gradient(rgb(214, 214, 214), rgb(185, 185, 185));
-    --panel-min-button-background-active-color: linear-gradient(rgb(241, 241, 241), rgb(213, 213, 213));
+    --panel-min-button-icon-active-color: rgb(81, 81, 81);
+    --panel-min-button-border-active-color: linear-gradient(rgb(219, 219, 219), rgb(190, 190, 190));
+    --panel-min-button-background-active-color: linear-gradient(rgb(246, 246, 246), rgb(218, 218, 218));
+
+
+
+
+    /* ===================== (DISABLED) ===================== */
+
+    /* Panel Bar X Button */
+    --panel-x-button-icon-disabled-color: rgb(186, 186, 186);
+    --panel-x-button-border-disabled-color: linear-gradient(rgb(217, 217, 217), rgb(198, 198, 198));
+    --panel-x-button-background-disabled-color: linear-gradient(rgb(224, 224, 224), rgb(197, 197, 197));
+
+
+    /* Panel Bar Max Button */
+    --panel-max-button-icon-disabled-color: rgb(186, 186, 186);
+    --panel-max-button-border-disabled-color: linear-gradient(rgb(217, 217, 217), rgb(198, 198, 198));
+    --panel-max-button-background-disabled-color: linear-gradient(rgb(224, 224, 224), rgb(197, 197, 197));
+
+
+    /* Panel Bar Min Button */
+    --panel-min-button-icon-disabled-color: rgb(186, 186, 186);
+    --panel-min-button-border-disabled-color: linear-gradient(rgb(217, 217, 217), rgb(198, 198, 198));
+    --panel-min-button-background-disabled-color: linear-gradient(rgb(224, 224, 224), rgb(197, 197, 197));
 }
 
 * {

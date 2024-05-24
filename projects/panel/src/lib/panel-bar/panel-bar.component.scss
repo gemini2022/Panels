@@ -2,7 +2,9 @@
     position: relative;
     cursor: var(--panel-bar-cursor);
 
-    &:hover {
+    &:hover:not(.no-hover) {
+        cursor: var(--panel-bar-hover-cursor);
+
         .panel-bar-border {
             background: var(--panel-bar-border-hover-color);
         }
@@ -47,15 +49,4 @@
     background: var(--panel-bar-background-color);
     border-top-left-radius: calc(var(--panel-top-left-radius) - 1px);
     border-top-right-radius: calc(var(--panel-top-right-radius) - 1px);
-}
-
-
-
-.no-hover {
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    position: absolute;
-    height: var(--panel-bar-height);
 }

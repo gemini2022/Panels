@@ -24,10 +24,12 @@ export class AppComponent {
   title = 'panels';
   private panel = viewChild(PanelComponent);
   protected maxButtonIcon: string = 'stack';
+  protected maxButtonTooltip: string = 'Restore Down'
 
   private ngOnInit(): void {
-    this.panel()?.maxButtonClickedEvent.subscribe(()=> {
+    this.panel()?.maxButtonClickedEvent.subscribe(() => {
       this.maxButtonIcon = this.maxButtonIcon === 'stack' ? 'check_box_outline_blank' : 'stack';
+      this.maxButtonTooltip = this.maxButtonTooltip === 'Restore Down' ? 'Maximize' : 'Restore Down';
     })
   }
 }

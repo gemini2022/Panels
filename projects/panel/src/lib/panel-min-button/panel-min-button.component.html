@@ -1,4 +1,9 @@
-<div class="min-button-container" [title]="minTooltip" (click)="clickedEvent.emit()">
+<div [title]="minTooltip"
+     class="min-button-container"
+     [ngClass]="{'disabled': disabled()}"
+     (mousedown)="mouseDownedEvent.emit()"
+     (click)="!disabled() ? clickedEvent.emit() : null">
+
     <div class="min-button-border">
         <div class="min-button-background">
             <i class="material-symbols-outlined min-button-icon" [style.fontSize]="fontSize()">{{minIcon}}</i>

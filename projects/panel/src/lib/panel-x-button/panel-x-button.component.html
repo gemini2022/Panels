@@ -1,4 +1,9 @@
-<div class="x-button-container" [title]="xTooltip" (click)="clickedEvent.emit()">
+<div [title]="xTooltip"
+     class="x-button-container"
+     [ngClass]="{'disabled': disabled()}"
+     (mousedown)="mouseDownedEvent.emit()"
+     (click)="!disabled() ? clickedEvent.emit() : null">
+
     <div class="x-button-border">
         <div class="x-button-background">
             <i class="material-symbols-outlined x-button-icon" [style.fontSize]="fontSize()">{{xIcon}}</i>

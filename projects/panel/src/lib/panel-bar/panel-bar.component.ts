@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, viewChild } from '@angular/core';
+import { Component, ElementRef, Renderer2, inject, output, viewChild } from '@angular/core';
 
 @Component({
   selector: 'panel-bar',
@@ -9,14 +9,19 @@ import { Component, ElementRef, viewChild } from '@angular/core';
   styleUrl: './panel-bar.component.scss'
 })
 export class PanelBarComponent {
+  // Output
+  public mouseDownedEvent = output<MouseEvent>();
+
   // Private
   protected height!: string;
   protected hoverDisabled!: boolean;
-  private container = viewChild<ElementRef<HTMLElement>>('container');
+  private renderer = inject(Renderer2);
+  private removeMouseDownListener!: () => void;
+  private bar = viewChild<ElementRef<HTMLElement>>('bar');
 
 
   public getHeight(): number {
-    return this.container()?.nativeElement.offsetHeight!;
+    return this.bar()?.nativeElement.offsetHeight!;
   }
 
 
@@ -27,7 +32,19 @@ export class PanelBarComponent {
 
 
 
+  public setMouseDownListener(): void {
+    this.removeMouseDownListener = this.renderer.listen(this.bar()?.nativeElement, 'mousedown', ((e: MouseEvent) => this.mouseDownedEvent.emit(e)));
+  }
+
+
+
   public disableHover(hoverDisabled: boolean) {
     this.hoverDisabled = hoverDisabled;
+  }
+
+
+
+  private ngOnDestroy(): void {
+    if (this.removeMouseDownListener) this.removeMouseDownListener();
   }
 }
