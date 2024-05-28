@@ -9,7 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './collapsible-panel-arrow.component.scss'
 })
 export class CollapsiblePanelArrowComponent {
-  protected isExpanded: boolean = true;
+  protected isExpanded!: boolean;
+
+
+
+  public setIsExpanded(isExpanded: boolean): void {
+    this.isExpanded = isExpanded;
+  }
 
 
   public expandCollapse(isExpanded: boolean): void {

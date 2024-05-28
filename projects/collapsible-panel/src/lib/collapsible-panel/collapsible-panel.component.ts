@@ -14,13 +14,16 @@ import { CollapsiblePanelArrowComponent } from '../collapsible-panel-arrow/colla
 export class CollapsiblePanelComponent {
   // Inputs
   public width = input<string>();
+  public isExpanded = input(true);
   public barHeight = input<string>();
   public barHoverDisabled = input(false, { transform: booleanAttribute });
 
   // Private
+  private _isExpanded!: boolean;
   private bar = contentChild(CollapsiblePanelBarComponent);
   private base = contentChild(CollapsiblePanelBaseComponent);
   private arrow = contentChild(CollapsiblePanelArrowComponent);
+
 
 
   constructor() {
@@ -33,6 +36,7 @@ export class CollapsiblePanelComponent {
 
   private ngOnInit(): void {
     this.setBarHeight();
+    this.setIsExpanded();
     this.setBarClickSubscription();
   }
 
@@ -50,10 +54,19 @@ export class CollapsiblePanelComponent {
 
 
 
+  private setIsExpanded() {
+    this._isExpanded = this.isExpanded();
+    this.base()?.setIsExpanded(this._isExpanded);
+    this.arrow()?.setIsExpanded(this._isExpanded);
+  }
+
+
+
   private setBarClickSubscription(): void {
-    this.bar()?.clickedEvent.subscribe((isExpanded: boolean) => {
-      this.base()?.expandCollapse(isExpanded);
-      this.arrow()?.expandCollapse(isExpanded);
-    })  
+    this.bar()?.clickedEvent.subscribe(() => {
+      this._isExpanded = !this._isExpanded;
+      this.base()?.expandCollapse(this._isExpanded);
+      this.arrow()?.expandCollapse(this._isExpanded);
+    })
   }
 }

@@ -10,12 +10,11 @@ import { Component, output } from '@angular/core';
 })
 export class CollapsiblePanelBarComponent {
   // Output
-  public clickedEvent = output<boolean>();
+  public clickedEvent = output();
 
   // Private
   protected height!: string;
   protected hoverDisabled!: boolean;
-  private isExpanded: boolean = true;
   
 
 
@@ -27,12 +26,5 @@ export class CollapsiblePanelBarComponent {
 
   public disableHover(hoverDisabled: boolean): void {
     this.hoverDisabled = hoverDisabled;
-  }
-
-
-
-  protected onClick() {
-    this.isExpanded = !this.isExpanded;
-    this.clickedEvent.emit(this.isExpanded);
   }
 }

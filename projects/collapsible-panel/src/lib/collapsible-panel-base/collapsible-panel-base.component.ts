@@ -8,17 +8,20 @@ import { Component, ElementRef, Renderer2, inject, viewChild } from '@angular/co
   styleUrl: './collapsible-panel-base.component.scss'
 })
 export class CollapsiblePanelBaseComponent {
+  private isExpanded!: boolean;
   private baseScrollHeight!: number;
-  private isExpanded: boolean = true;
   private renderer = inject(Renderer2);
   private base = viewChild<ElementRef<HTMLElement>>('base');
 
 
-  private ngAfterViewInit(): void {
-    this.renderer.setStyle(this.base()!.nativeElement, 'height', this.base()?.nativeElement.scrollHeight! + 'px');
+
+  public setIsExpanded(isExpanded: boolean): void {
+    this.isExpanded = isExpanded;
+    this.renderer.setStyle(this.base()!.nativeElement, 'height', (isExpanded ? this.base()?.nativeElement.scrollHeight! : 0) + 'px');
   }
 
 
+  
   protected getBaseHeight(base: HTMLElement) {
     if (base.scrollHeight !== this.baseScrollHeight) {
       this.baseScrollHeight = base.scrollHeight;

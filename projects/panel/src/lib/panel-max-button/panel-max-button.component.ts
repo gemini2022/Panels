@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, effect, input, output } from '@angular/core';
+import { Component, booleanAttribute, effect, input, output } from '@angular/core';
 
 @Component({
   selector: 'panel-max-button',
@@ -13,7 +13,7 @@ export class PanelMaxButtonComponent {
   public icon = input<string>();
   public tooltip = input<string>();
   public fontSize = input<string>();
-  public disabled = input(false, { transform: (value: boolean | string) => typeof value === 'string' ? value === '' : value });
+  public disabled = input(false, { transform: booleanAttribute });
 
   // Outputs
   public clickedEvent = output();
