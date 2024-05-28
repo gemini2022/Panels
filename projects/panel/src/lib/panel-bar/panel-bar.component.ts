@@ -38,7 +38,7 @@ export class PanelBarComponent {
 
 
 
-  public disableHover(hoverDisabled: boolean) {
+  public disableHover(hoverDisabled: boolean): void {
     this.hoverDisabled = hoverDisabled;
   }
 

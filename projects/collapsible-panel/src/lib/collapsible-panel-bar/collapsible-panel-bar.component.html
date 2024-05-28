@@ -1,0 +1,7 @@
+<div class="panel-bar-container" [ngStyle]="{'height': height}" [ngClass]="{'no-hover': hoverDisabled}" (click)="onClick()">
+    <div class="panel-bar-border">
+        <div class="panel-bar-background">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

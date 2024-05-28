@@ -16,6 +16,9 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "paths": {
+      "collapsible-panel": [
+        "./dist/collapsible-panel"
+      ],
       "panel": [
         "./dist/panel"
       ]

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Renderer2, contentChild, effect, inject, input, output, viewChild } from '@angular/core';
+import { Component, ElementRef, Renderer2, booleanAttribute, contentChild, effect, inject, input, output, viewChild } from '@angular/core';
 import { PanelBaseComponent } from '../panel-base/panel-base.component';
 import { PanelBarComponent } from '../panel-bar/panel-bar.component';
 import { PanelXButtonComponent } from '../panel-x-button/panel-x-button.component';
@@ -17,9 +17,9 @@ export class PanelComponent {
   // Inputs
   public width = input<string>();
   public height = input<string>();
-  public panelBarHeight = input<string>();
-  public allowPanelDrag = input(false, { transform: (value: boolean | string) => typeof value === 'string' ? value === '' : value });
-  public panelBarHoverDisabled = input(false, { transform: (value: boolean | string) => typeof value === 'string' ? value === '' : value });
+  public barHeight = input<string>();
+  public allowDrag = input(false, { transform: booleanAttribute });
+  public barHoverDisabled = input(false, { transform: booleanAttribute });
 
   // Outputs
   public xButtonClickedEvent = output();
@@ -31,7 +31,7 @@ export class PanelComponent {
   private offset = { x: 0, y: 0 };
   private renderer = inject(Renderer2);
   private stopMouseDownPropagation!: boolean;
-  private bar = contentChild(PanelBarComponent)
+  private bar = contentChild(PanelBarComponent);
   private base = contentChild(PanelBaseComponent);
   private removeWindowMouseUpListener!: () => void;
   private removeWindowMouseMoveListener!: () => void;
@@ -61,33 +61,30 @@ export class PanelComponent {
 
 
   private setBaseHeight(): void {
-    if (this.bar() && this.base()) {
-      if (getComputedStyle(document.documentElement).getPropertyValue('--panel-height') || this.height()) {
-        const panelHeight = this.panel()?.nativeElement.offsetHeight;
-        this.base()?.setHeight(panelHeight! - this.bar()?.getHeight()!);
-      }
+    if (getComputedStyle(document.documentElement).getPropertyValue('--panel-height') || this.height()) {
+      const panelHeight = this.panel()?.nativeElement.offsetHeight;
+      this.base()?.setHeight(panelHeight! - this.bar()?.getHeight()!);
     }
   }
 
 
 
   private setBarHoverable(): void {
-    this.bar()?.disableHover(this.panelBarHoverDisabled());
+    this.bar()?.disableHover(this.barHoverDisabled());
   }
 
 
 
   private setBarHeight(): void {
-    if (this.panelBarHeight() && this.bar()) {
-      this.bar()!.setHeight(this.panelBarHeight()!);
-    }
+    if (this.barHeight()) this.bar()?.setHeight(this.barHeight()!);
   }
 
 
 
   private setPanelDrag(): void {
-    if (this.allowPanelDrag()) {
+    if (this.allowDrag()) {
       this.bar()?.setMouseDownListener();
+      this.renderer.setStyle(this.panel()?.nativeElement, 'position', 'absolute');
       this.bar()?.mouseDownedEvent.subscribe((e: MouseEvent) => this.onBarMouseDown(e));
       this.xButton()?.mouseDownedEvent.subscribe(() => this.stopMouseDownPropagation = true);
       this.maxButton()?.mouseDownedEvent.subscribe(() => this.stopMouseDownPropagation = true);
@@ -125,7 +122,7 @@ export class PanelComponent {
     if (!this.stopMouseDownPropagation) {
       this.isDragging = true;
       this.offset.x = e.clientX - this.panel()?.nativeElement.getBoundingClientRect().left!,
-      this.offset.y = e.clientY - this.panel()?.nativeElement.getBoundingClientRect().top!
+        this.offset.y = e.clientY - this.panel()?.nativeElement.getBoundingClientRect().top!
       this.removeWindowMouseUpListener = this.renderer.listen('window', 'mouseup', () => this.onWindowMouseUp());
       this.removeWindowMouseMoveListener = this.renderer.listen('window', 'mousemove', (e: MouseEvent) => this.onWindowMouseMove(e));
 

@@ -1,0 +1,88 @@
+:root {
+
+    /* ===================== (DIMENSIONS) ===================== */
+
+    /* Panel */
+    --collapsible-panel-width: 400px;
+    --collapsible-panel-top-left-radius: 8px;
+    --collapsible-panel-top-right-radius: 8px;
+    --collapsible-panel-bottom-left-radius: 8px;
+    --collapsible-panel-bottom-right-radius: 8px;
+    /* --collapsible-panel-drop-shadow: 8px 8px 10px rgba(0, 0, 0, 0.13); */
+
+
+    /* Panel Bar */
+    --collapsible-panel-bar-height: 24px;
+    --collapsible-panel-bar-cursor: default;
+    --collapsible-panel-bar-padding-left: 1px;
+    --collapsible-panel-bar-padding-right: 7px;
+    --collapsible-panel-bar-hover-cursor: pointer;
+    --collapsible-panel-bar-drop-shadow-blur: 2px;
+    --collapsible-panel-bar-drop-shadow-height: 2px;
+    /* --collapsible-panel-justify-content: space-between; */
+    --collapsible-panel-bar-drop-shadow-color: rgba(0, 0, 0, 0.2);
+
+
+
+    /* Panel Arrow */
+    --collapsible-panel-arrow-size: 6px;
+    --collapsible-panel-arrow-container-width: 24px;
+    --collapsible-panel-arrow-container-height: 24px;
+
+
+    /* Panel Title */
+    --collapsible-panel-title-font-size: 14px;
+    --collapsible-panel-title-font-weight: normal;
+    --collapsible-panel-title-font-family: Arial, Helvetica, sans-serif;
+
+    
+    /* Panel Base */
+    --collapsible-panel-base-padding: 10px;
+
+    
+
+
+    /* ===================== (COLORS) ===================== */
+
+    /* Panel Bar */
+    --collapsible-panel-bar-border-color: linear-gradient(#cecece, #a1a1a1);
+    --collapsible-panel-bar-background-color: linear-gradient(#e0e0e0, #c9c9c9);
+
+
+    /* Panel Title */
+    --collapsible-panel-title-text-color: #404040;
+
+
+     /* Panel Arrow */
+     --collapsible-panel-arrow-color: #404040;
+
+
+    /* Panel Base */
+    --collapsible-panel-base-border-color: #c5c5c5;
+    --collapsible-panel-base-background-color: #e0e0e0;
+
+
+
+
+    /* ===================== (HOVER COLORS) ===================== */
+
+    /* Panel Bar */
+    --collapsible-panel-bar-border-hover-color: linear-gradient(#c6c6c6, #9c9c9c);
+    --collapsible-panel-bar-background-hover-color: linear-gradient(#dadada, #c3c3c3);
+        /* Arrow */
+        --collapsible-panel-arrow-color-on-panel-bar-hover: #000000;
+    
+
+    /* Panel Title */
+    --collapsible-panel-title-text-hover-color: #000000;
+
+
+    /* Panel Arrow */
+    --collapsible-panel-arrow-hover-color: #6d6d6d;
+
+
+
+
+    /* ===================== (ACTIVE COLORS) ===================== */
+    --collapsible-panel-arrow-active-color: #a8a8a8;
+}

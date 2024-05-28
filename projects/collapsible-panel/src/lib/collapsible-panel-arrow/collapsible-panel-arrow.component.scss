@@ -1,0 +1,46 @@
+.arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--collapsible-panel-arrow-container-width);
+    height: var(--collapsible-panel-arrow-container-height);
+
+    &:hover {
+        .arrow {
+            border-left-color: var(--collapsible-panel-arrow-hover-color);
+        }
+
+        .arrow-down {
+            border-left-color: transparent;
+            border-top-color: var(--collapsible-panel-arrow-hover-color);
+        }
+    }
+
+    &:active {
+        .arrow {
+            border-left-color: var(--collapsible-panel-arrow-active-color);
+        }
+
+        .arrow-down {
+            border-left-color: transparent;
+            border-top-color: var(--collapsible-panel-arrow-active-color);
+        }
+    }
+}
+
+
+
+.arrow {
+    border-top: calc(var(--collapsible-panel-arrow-size) / 2) solid transparent;
+    border-bottom: calc(var(--collapsible-panel-arrow-size) / 2) solid transparent;
+    border-left: var(--collapsible-panel-arrow-size) solid var(--collapsible-panel-arrow-color);
+}
+
+
+
+.arrow-down {
+    border-bottom: transparent;
+    border-left: calc(var(--collapsible-panel-arrow-size) / 2) solid transparent;
+    border-right: calc(var(--collapsible-panel-arrow-size) / 2) solid transparent;
+    border-top: var(--collapsible-panel-arrow-size) solid var(--collapsible-panel-arrow-color);
+}

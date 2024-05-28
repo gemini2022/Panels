@@ -8,8 +8,6 @@ import { Component, signal } from '@angular/core';
   styleUrl: './panel-base.component.scss'
 })
 export class PanelBaseComponent {
-  protected baseTop = signal(0);
-  protected baseWidth = signal(0);
   protected baseHeight = signal(-1);
 
 

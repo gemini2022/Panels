@@ -43,10 +43,10 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding-left: var(--panel-bar-padding-left);
     padding-right: var(--panel-bar-padding-right);
     background: var(--panel-bar-background-color);
+    justify-content: var(--panel-bar-justify-content);
     border-top-left-radius: calc(var(--panel-top-left-radius) - 1px);
     border-top-right-radius: calc(var(--panel-top-right-radius) - 1px);
 }

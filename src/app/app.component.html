@@ -1,13 +1,36 @@
-<panel allowPanelDrag>
-  <panel-bar>
-    <panel-title>My Panel</panel-title>
-    <button-group width="80px">
-      <panel-min-button></panel-min-button>
-      <panel-max-button [icon]="maxButtonIcon" [tooltip]="maxButtonTooltip"></panel-max-button>
-      <panel-x-button></panel-x-button>
-    </button-group>
-  </panel-bar>
-  <panel-base>
-    <div style="width: 30px; height: 30px; background: orange;"></div>
-  </panel-base>
-</panel>
+<button (click)="onClick()">Click Me!</button>
+
+<div style="display: flex;">
+
+  <div style="width: 500px;">
+
+    <panel allowDrag>
+      <panel-bar>
+        <panel-title>My Panel</panel-title>
+        <button-group width="80px">
+          <panel-min-button></panel-min-button>
+          <panel-max-button [icon]="maxButtonIcon" [tooltip]="maxButtonTooltip"></panel-max-button>
+          <panel-x-button></panel-x-button>
+        </button-group>
+      </panel-bar>
+      <panel-base>
+        <div style="width: 30px; height: 30px; background: orange;"></div>
+      </panel-base>
+    </panel>
+
+  </div>
+
+
+  <collapsible-panel>
+    <collapsible-panel-bar>
+      <collapsible-panel-arrow></collapsible-panel-arrow>
+      <collapsible-panel-title>My Collapsible Panel</collapsible-panel-title>
+    </collapsible-panel-bar>
+    <collapsible-panel-base>
+      <div style="width: 30px; height: 30px; background: orange;"></div>
+      @if (trumpy) {
+        <div style="width: 30px; height: 30px; background: orange;"></div>
+      }
+    </collapsible-panel-base>
+  </collapsible-panel>
+</div>
