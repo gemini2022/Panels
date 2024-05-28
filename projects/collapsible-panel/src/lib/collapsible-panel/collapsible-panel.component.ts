@@ -1,7 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { Component, booleanAttribute, contentChild, effect, input } from '@angular/core';
 import { CollapsiblePanelBarComponent } from '../collapsible-panel-bar/collapsible-panel-bar.component';
 import { CollapsiblePanelBaseComponent } from '../collapsible-panel-base/collapsible-panel-base.component';
-import { CommonModule } from '@angular/common';
 import { CollapsiblePanelArrowComponent } from '../collapsible-panel-arrow/collapsible-panel-arrow.component';
 
 @Component({
