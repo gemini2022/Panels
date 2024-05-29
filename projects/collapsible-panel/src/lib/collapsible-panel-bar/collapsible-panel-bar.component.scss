@@ -1,15 +1,15 @@
-.panel-bar-container {
+.container {
     position: relative;
     cursor: var(--collapsible-panel-bar-cursor);
 
     &:hover:not(.no-hover) {
         cursor: var(--collapsible-panel-bar-hover-cursor);
 
-        .panel-bar-border {
+        .border {
             background: var(--collapsible-panel-bar-border-hover-color);
         }
 
-        .panel-bar-background {
+        .background {
             background: var(--collapsible-panel-bar-background-hover-color);
         }
         --collapsible-panel-title-text-color: var(--collapsible-panel-title-text-hover-color);
@@ -18,24 +18,21 @@
 }
 
 
-.panel-bar-border {
-    padding: 1px;
+.border {
     height: var(--collapsible-panel-bar-height);
     background: var(--collapsible-panel-bar-border-color);
-    border-top-left-radius: var(--collapsible-panel-top-left-radius);
-    border-top-right-radius: var(--collapsible-panel-top-right-radius);
+    border-top-left-radius: var(--collapsible-panel-border-top-left-radius);
+    border-top-right-radius: var(--collapsible-panel-border-top-right-radius);
 }
 
 
 
-.panel-bar-background {
+.background {
     height: 100%;
     display: flex;
     align-items: center;
-    padding-left: var(--collapsible-panel-bar-padding-left);
-    padding-right: var(--collapsible-panel-bar-padding-right);
     background: var(--collapsible-panel-bar-background-color);
     justify-content: var(--collapsible-panel-justify-content);
-    border-top-left-radius: calc(var(--collapsible-panel-top-left-radius) - 1px);
-    border-top-right-radius: calc(var(--collapsible-panel-top-right-radius) - 1px);
+    border-top-left-radius: calc(var(--collapsible-panel-border-top-left-radius) - 1px);
+    border-top-right-radius: calc(var(--collapsible-panel-border-top-right-radius) - 1px);
 }

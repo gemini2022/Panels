@@ -20,8 +20,8 @@ export class PanelXButtonComponent {
   public mouseDownedEvent = output();
 
   // Private
-  protected xIcon!: string;
-  protected xTooltip!: string;
+  protected _icon!: string;
+  protected _tooltip!: string;
 
 
   constructor() {
@@ -34,12 +34,12 @@ export class PanelXButtonComponent {
 
 
   private setIcon(): void {
-    this.xIcon = this.icon() ? this.icon()! : getComputedStyle(document.documentElement).getPropertyValue('--panel-x-button-icon');
+    this._icon = this.icon() ? this.icon()! : getComputedStyle(document.documentElement).getPropertyValue('--panel-x-button-icon');
   }
 
 
 
   private setTooltip(): void {
-    this.xTooltip = this.tooltip() ? this.tooltip()! : getComputedStyle(document.documentElement).getPropertyValue('--panel-x-button-tooltip');
+    this._tooltip = this.tooltip() ? this.tooltip()! : getComputedStyle(document.documentElement).getPropertyValue('--panel-x-button-tooltip');
   }
 }

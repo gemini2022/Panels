@@ -20,8 +20,8 @@ export class PanelMaxButtonComponent {
   public mouseDownedEvent = output();
 
   // Private
-  protected maxIcon!: string;
-  protected maxTooltip!: string;
+  protected _icon!: string;
+  protected _tooltip!: string;
 
 
   constructor() {
@@ -34,12 +34,12 @@ export class PanelMaxButtonComponent {
 
 
   private setIcon(): void {
-    this.maxIcon = this.icon() ? this.icon()! : getComputedStyle(document.documentElement).getPropertyValue('--panel-max-button-icon');
+    this._icon = this.icon() ? this.icon()! : getComputedStyle(document.documentElement).getPropertyValue('--panel-max-button-icon');
   }
 
 
 
   private setTooltip(): void {
-    this.maxTooltip = this.tooltip() ? this.tooltip()! : getComputedStyle(document.documentElement).getPropertyValue('--panel-max-button-tooltip');
+    this._tooltip = this.tooltip() ? this.tooltip()! : getComputedStyle(document.documentElement).getPropertyValue('--panel-max-button-tooltip');
   }
 }

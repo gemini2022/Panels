@@ -14,8 +14,12 @@ export class CollapsiblePanelBarComponent {
 
   // Private
   protected height!: string;
+  protected padding!: string;
+  protected borderWidth!: string;
   protected hoverDisabled!: boolean;
-  
+  protected borderTopLeftRadius!: string;
+  protected borderTopRightRadius!: string;
+
 
 
   public setHeight(barHeight: string): void {
@@ -24,7 +28,26 @@ export class CollapsiblePanelBarComponent {
 
 
 
+  public setPadding(padding: string) {
+    this.padding = padding;
+  }
+
+
+
+  public setBorderWidth(borderWidth: string) {
+    this.borderWidth = borderWidth;
+  }
+
+
+
   public disableHover(hoverDisabled: boolean): void {
     this.hoverDisabled = hoverDisabled;
+  }
+
+
+
+  public setBorderRadius(borderTopLeftRadius: string, borderTopRightRadius: string) {
+    this.borderTopLeftRadius = borderTopLeftRadius;
+    this.borderTopRightRadius = borderTopRightRadius;
   }
 }

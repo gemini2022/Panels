@@ -1,6 +1,14 @@
-<div #base class="panel-base-container" [style]="getBaseHeight(base)">
-    <div class="panel-base-border">
-        <div class="panel-base-background">
+<div #base
+     class="container"
+     [style]="getBaseHeight(base)">
+
+    <div class="border"
+         [ngStyle]="{'padding': borderWidth}"
+         [style]="'--collapsible-panel-border-bottom-left-radius:' + borderBottomLeftRadius + ';' +
+                  '--collapsible-panel-border-bottom-right-radius:' + borderBottomRightRadius">
+
+        <div class="background"
+             [ngStyle]="{'padding': padding}">
             <ng-content></ng-content>
         </div>
     </div>

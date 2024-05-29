@@ -1,33 +1,33 @@
-.max-button-container {
+.container {
     user-select: none;
     cursor: var(--panel-bar-button-cursor);
 
     &:hover:not(.disabled) {
         cursor: var(--panel-bar-button-hover-cursor);
 
-        .max-button-border {
+        .border {
             background: var(--panel-max-button-border-hover-color);
         }
 
-        .max-button-background {
+        .background {
             background: var(--panel-max-button-background-hover-color);
         }
 
-        .max-button-icon {
+        .icon {
             color: var(--panel-max-button-icon-hover-color);
         }
     }
 
     &:active:not(.disabled) {
-        .max-button-border {
+        .border {
             background: var(--panel-max-button-border-active-color);
         }
 
-        .max-button-background {
+        .background {
             background: var(--panel-max-button-background-active-color);
         }
 
-        .max-button-icon {
+        .icon {
             color: var(--panel-max-button-icon-active-color);
         }
     }
@@ -35,7 +35,7 @@
 
 
 
-.max-button-border {
+.border {
     padding: 1px;
     width: var(--panel-bar-button-width);
     height: var(--panel-bar-button-height);
@@ -45,7 +45,7 @@
 
 
 
-.max-button-background {
+.background {
     height: 100%;
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@
 
 
 
-.max-button-icon {
+.icon {
     color: var(--panel-max-button-icon-color);
     font-size: var(--panel-max-button-icon-font-size);
 }
@@ -66,15 +66,15 @@
 .disabled {
     opacity: var(--panel-bar-button-disabled-opacity);
 
-    .max-button-border {
+    .border {
         background: var(--panel-max-button-border-disabled-color);
     }
 
-    .max-button-background {
+    .background {
         background: var(--panel-max-button-background-disabled-color);
     }
 
-    .max-button-icon {
+    .icon {
         color: var(--panel-max-button-icon-disabled-color);
     }
 }

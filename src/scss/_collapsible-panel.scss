@@ -4,18 +4,15 @@
 
     /* Panel */
     --collapsible-panel-width: 400px;
-    --collapsible-panel-top-left-radius: 8px;
-    --collapsible-panel-top-right-radius: 8px;
-    --collapsible-panel-bottom-left-radius: 8px;
-    --collapsible-panel-bottom-right-radius: 8px;
+    --collapsible-panel-border-radius: 7px 7px 7px 7px;
     /* --collapsible-panel-drop-shadow: 8px 8px 10px rgba(0, 0, 0, 0.13); */
 
 
     /* Panel Bar */
+    --collapsible-panel-bar-padding: 0;
     --collapsible-panel-bar-height: 24px;
     --collapsible-panel-bar-cursor: default;
-    --collapsible-panel-bar-padding-left: 1px;
-    --collapsible-panel-bar-padding-right: 7px;
+    --collapsible-panel-bar-border-width: 1px;
     --collapsible-panel-bar-hover-cursor: pointer;
     --collapsible-panel-bar-drop-shadow-blur: 2px;
     --collapsible-panel-bar-drop-shadow-height: 2px;
@@ -38,6 +35,7 @@
     
     /* Panel Base */
     --collapsible-panel-base-padding: 10px;
+    --collapsible-panel-base-border-width: 0 1px 1px 1px;
 
     
 

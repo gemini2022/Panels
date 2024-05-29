@@ -1,33 +1,33 @@
-.x-button-container {
+.container {
     user-select: none;
     cursor: var(--panel-bar-button-cursor);
     
     &:hover:not(.disabled) {
         cursor: var(--panel-bar-button-hover-cursor);
 
-        .x-button-border {
+        .border {
             background: var(--panel-x-button-border-hover-color);
         }
 
-        .x-button-background {
+        .background {
             background: var(--panel-x-button-background-hover-color);
         }
 
-        .x-button-icon {
+        .icon {
             color: var(--panel-x-button-icon-hover-color);
         }
     }
 
     &:active:not(.disabled) {
-        .x-button-border {
+        .border {
             background: var(--panel-x-button-border-active-color);
         }
 
-        .x-button-background {
+        .background {
             background: var(--panel-x-button-background-active-color);
         }
 
-        .x-button-icon {
+        .icon {
             color: var(--panel-x-button-icon-active-color);
         }
     }
@@ -35,7 +35,7 @@
 
 
 
-.x-button-border {
+.border {
     padding: 1px;
     width: var(--panel-bar-button-width);
     height: var(--panel-bar-button-height);
@@ -45,7 +45,7 @@
 
 
 
-.x-button-background {
+.background {
     height: 100%;
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@
 
 
 
-.x-button-icon {
+.icon {
     color: var(--panel-x-button-icon-color);
     font-size: var(--panel-x-button-icon-font-size);
 }
@@ -65,15 +65,15 @@
 .disabled {
     opacity: var(--panel-bar-button-disabled-opacity);
 
-    .x-button-border {
+    .border {
         background: var(--panel-x-button-border-disabled-color);
     }
 
-    .x-button-background {
+    .background {
         background: var(--panel-x-button-background-disabled-color);
     }
 
-    .x-button-icon {
+    .icon {
         color: var(--panel-x-button-icon-disabled-color);
     }
 }

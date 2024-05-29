@@ -1,4 +1,4 @@
-.panel-base-container {
+.container {
     position: relative;
     overflow: hidden;
 
@@ -17,19 +17,16 @@
 
 
 
-.panel-base-border {
-    padding: 1px;
-    padding-top: 0;
+.border {
     background: var(--collapsible-panel-base-border-color);
-    border-bottom-left-radius: var(--collapsible-panel-bottom-left-radius);
-    border-bottom-right-radius: var(--collapsible-panel-bottom-right-radius);
+    border-bottom-left-radius: var(--collapsible-panel-border-bottom-left-radius);
+    border-bottom-right-radius: var(--collapsible-panel-border-bottom-right-radius);
 }
 
 
 
-.panel-base-background {
-    padding: var(--collapsible-panel-base-padding);
+.background {
     background: var(--collapsible-panel-base-background-color);
-    border-bottom-left-radius: calc(var(--collapsible-panel-bottom-left-radius) - 1px);
-    border-bottom-right-radius: calc(var(--collapsible-panel-bottom-right-radius) - 1px);
+    border-bottom-left-radius: calc(var(--collapsible-panel-border-bottom-left-radius) - 1px);
+    border-bottom-right-radius: calc(var(--collapsible-panel-border-bottom-right-radius) - 1px);
 }

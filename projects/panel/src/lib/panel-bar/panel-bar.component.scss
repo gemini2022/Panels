@@ -1,4 +1,4 @@
-.panel-bar-container {
+.container {
     position: relative;
     cursor: var(--panel-bar-cursor);
 
@@ -29,24 +29,21 @@
 }
 
 
-.panel-bar-border {
-    padding: 1px;
+.border {
     height: var(--panel-bar-height);
     background: var(--panel-bar-border-color);
-    border-top-left-radius: var(--panel-top-left-radius);
-    border-top-right-radius: var(--panel-top-right-radius);
+    border-top-left-radius: var(--panel-border-top-left-radius);
+    border-top-right-radius: var(--panel-border-top-right-radius);
 }
 
 
 
-.panel-bar-background {
+.background {
     height: 100%;
     display: flex;
     align-items: center;
-    padding-left: var(--panel-bar-padding-left);
-    padding-right: var(--panel-bar-padding-right);
     background: var(--panel-bar-background-color);
     justify-content: var(--panel-bar-justify-content);
-    border-top-left-radius: calc(var(--panel-top-left-radius) - 1px);
-    border-top-right-radius: calc(var(--panel-top-right-radius) - 1px);
+    border-top-left-radius: calc(var(--panel-border-top-left-radius) - 1px);
+    border-top-right-radius: calc(var(--panel-border-top-right-radius) - 1px);
 }

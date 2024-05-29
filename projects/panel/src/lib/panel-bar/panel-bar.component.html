@@ -1,6 +1,15 @@
-<div #bar class="panel-bar-container" [ngStyle]="{'height': height}" [ngClass]="{'no-hover': hoverDisabled}">
-   <div class="panel-bar-border">
-      <div class="panel-bar-background">
+<div #bar
+     class="container"
+     [ngStyle]="{'height': height}"
+     [ngClass]="{'no-hover': hoverDisabled}">
+
+   <div class="border"
+        [ngStyle]="{'padding': borderWidth}"
+        [style]="'--panel-border-top-left-radius:' + borderTopLeftRadius + ';' +
+                 '--panel-border-top-right-radius:' + borderTopRightRadius">
+
+      <div class="background"
+           [ngStyle]="{'padding': padding}">
          <ng-content></ng-content>
       </div>
    </div>

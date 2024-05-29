@@ -1,6 +1,14 @@
-<div class="panel-base-container">
-    <div [style.height.px]="baseHeight()" class="panel-base-border">
-        <div [style.height.px]="baseHeight() - 1" class="panel-base-background">
+<div class="container">
+
+    <div class="border"
+         [style.height.px]="baseHeight()"
+         [ngStyle]="{'padding': borderWidth}"
+         [style]="'--panel-border-bottom-left-radius:' + borderBottomLeftRadius + ';' +
+                  '--panel-border-bottom-right-radius:' + borderBottomRightRadius">
+        
+         <div class="background"
+              [ngStyle]="{'padding': padding}"
+              [style.height.px]="baseHeight()">
             <ng-content></ng-content>
         </div>
     </div>

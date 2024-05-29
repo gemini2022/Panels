@@ -18,6 +18,11 @@ export class PanelComponent {
   public width = input<string>();
   public height = input<string>();
   public barHeight = input<string>();
+  public barPadding = input<string>();
+  public basePadding = input<string>();
+  public borderRadius = input<string>();
+  public barBorderWidth = input<string>();
+  public baseBorderWidth = input<string>();
   public allowDrag = input(false, { transform: booleanAttribute });
   public barHoverDisabled = input(false, { transform: booleanAttribute });
 
@@ -44,7 +49,6 @@ export class PanelComponent {
   constructor() {
     effect(() => {
       this.setBaseHeight();
-      this.setBarHoverable();
     }, { allowSignalWrites: true })
   }
 
@@ -53,6 +57,12 @@ export class PanelComponent {
   private ngOnInit(): void {
     this.setBarHeight();
     this.setPanelDrag();
+    this.setBarPadding();
+    this.setBasePadding();
+    this.setBarHoverable();
+    this.setBorderRadius();
+    this.setBarBorderWidth();
+    this.setBaseBorderWidth();
     this.setXButtonClickSubscription();
     this.setMaxButtonClickSubscription();
     this.setMinButtonClickSubscription();
@@ -90,6 +100,43 @@ export class PanelComponent {
       this.maxButton()?.mouseDownedEvent.subscribe(() => this.stopMouseDownPropagation = true);
       this.minButton()?.mouseDownedEvent.subscribe(() => this.stopMouseDownPropagation = true);
     }
+  }
+
+
+
+  private setBarPadding(): void {
+    const padding = this.barPadding() ? this.barPadding() : getComputedStyle(document.documentElement).getPropertyValue('--panel-bar-padding');
+    this.bar()?.setPadding(padding!);
+  }
+
+
+
+  private setBasePadding(): void {
+    const padding = this.basePadding() ? this.basePadding() : getComputedStyle(document.documentElement).getPropertyValue('--panel-base-padding');
+    this.base()?.setPadding(padding!);
+  }
+
+
+
+  private setBorderRadius(): void {
+    const borderRadius = this.borderRadius() ? this.borderRadius() : getComputedStyle(document.documentElement).getPropertyValue('--panel-border-radius');
+    this.renderer.setStyle(this.panel()?.nativeElement, 'border-radius', borderRadius);
+    this.bar()?.setBorderRadius(this.panel()?.nativeElement.style.borderTopLeftRadius!, this.panel()?.nativeElement.style.borderTopRightRadius!);
+    this.base()?.setBorderRadius(this.panel()?.nativeElement.style.borderBottomLeftRadius!, this.panel()?.nativeElement.style.borderBottomRightRadius!);
+  }
+
+
+
+  private setBarBorderWidth(): void {
+    const borderWidth = this.barBorderWidth() ? this.barBorderWidth() : getComputedStyle(document.documentElement).getPropertyValue('--panel-bar-border-width');
+    this.bar()?.setBorderWidth(borderWidth!);
+  }
+
+
+
+  private setBaseBorderWidth(): void {
+    const borderWidth = this.baseBorderWidth() ? this.baseBorderWidth() : getComputedStyle(document.documentElement).getPropertyValue('--panel-base-border-width');
+    this.base()?.setBorderWidth(borderWidth!);
   }
 
 

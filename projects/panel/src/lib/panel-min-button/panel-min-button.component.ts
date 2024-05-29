@@ -20,8 +20,8 @@ export class PanelMinButtonComponent {
   public mouseDownedEvent = output();
 
   // Private
-  protected minIcon!: string;
-  protected minTooltip!: string;
+  protected _icon!: string;
+  protected _tooltip!: string;
 
 
   constructor() {
@@ -34,12 +34,12 @@ export class PanelMinButtonComponent {
 
 
   private setIcon(): void {
-    this.minIcon = this.icon() ? this.icon()! : getComputedStyle(document.documentElement).getPropertyValue('--panel-min-button-icon');
+    this._icon = this.icon() ? this.icon()! : getComputedStyle(document.documentElement).getPropertyValue('--panel-min-button-icon');
   }
 
 
 
   private setTooltip(): void {
-    this.minTooltip = this.tooltip() ? this.tooltip()! : getComputedStyle(document.documentElement).getPropertyValue('--panel-min-button-tooltip');
+    this._tooltip = this.tooltip() ? this.tooltip()! : getComputedStyle(document.documentElement).getPropertyValue('--panel-min-button-tooltip');
   }
 }

@@ -1,6 +1,15 @@
-<div class="panel-bar-container" [ngStyle]="{'height': height}" [ngClass]="{'no-hover': hoverDisabled}" (click)="clickedEvent.emit()">
-    <div class="panel-bar-border">
-        <div class="panel-bar-background">
+<div class="container"
+     (click)="clickedEvent.emit()"
+     [ngStyle]="{'height': height}"
+     [ngClass]="{'no-hover': hoverDisabled}">
+
+    <div class="border"
+         [ngStyle]="{'padding': borderWidth}"
+         [style]="'--collapsible-panel-border-top-left-radius:' + borderTopLeftRadius + ';' +
+                  '--collapsible-panel-border-top-right-radius:' + borderTopRightRadius">
+
+        <div class="background"
+             [ngStyle]="{'padding': padding}">
             <ng-content></ng-content>
         </div>
     </div>

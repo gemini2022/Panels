@@ -4,10 +4,7 @@
 
     /* Panel */
     --panel-width: 400px;
-    --panel-top-left-radius: 8px;
-    --panel-top-right-radius: 8px;
-    --panel-bottom-left-radius: 8px;
-    --panel-bottom-right-radius: 8px;
+    --panel-border-radius: 7px 7px 7px 7px;
     --panel-drop-shadow: 8px 8px 10px rgba(0, 0, 0, 0.13);
     /* --panel-height: 400px; (optional) */
 
@@ -15,13 +12,19 @@
     /* Panel Bar */
     --panel-bar-height: 28px;
     --panel-bar-cursor: default;
-    --panel-bar-padding-left: 10px;
-    --panel-bar-padding-right: 7px;
+    --panel-bar-border-width: 1px;
+    --panel-bar-padding: 0 7px 0 10px;
     --panel-bar-hover-cursor: pointer;
     --panel-bar-drop-shadow-blur: 2px;
     --panel-bar-drop-shadow-height: 2px;
     --panel-bar-justify-content: space-between;
     --panel-bar-drop-shadow-color: rgba(0, 0, 0, 0.2);
+
+
+    /* Panel Title */
+    --panel-title-font-size: 14px;
+    --panel-title-font-weight: normal;
+    --panel-title-font-family: Arial, Helvetica, sans-serif;
 
 
 
@@ -46,14 +49,9 @@
         --panel-min-button-icon-font-size: 18px;
         
     
-    /* Panel Title */
-    --panel-title-font-size: 14px;
-    --panel-title-font-weight: normal;
-    --panel-title-font-family: Arial, Helvetica, sans-serif;
-
-    
     /* Panel Base */
     --panel-base-padding: 10px;
+    --panel-base-border-width: 0 1px 1px 1px;
 
     
 

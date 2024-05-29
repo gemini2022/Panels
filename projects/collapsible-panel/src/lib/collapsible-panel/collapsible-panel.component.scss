@@ -1,8 +1,4 @@
-.panel-container {
+.container {
     width: var(--collapsible-panel-width);
     box-shadow: var(--collapsible-panel-drop-shadow);
-    border-top-left-radius: var(--collapsible-panel-top-left-radius);
-    border-top-right-radius: var(--collapsible-panel-top-right-radius);
-    border-bottom-left-radius: var(--collapsible-panel-bottom-left-radius);
-    border-bottom-right-radius: var(--collapsible-panel-bottom-right-radius);
 }
