@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Renderer2, booleanAttribute, contentChild, effect, inject, input, output, viewChild } from '@angular/core';
-import { PanelBaseComponent } from '../panel-base/panel-base.component';
+import { PanelBodyComponent } from '../panel-body/panel-body.component';
 import { PanelBarComponent } from '../panel-bar/panel-bar.component';
 import { PanelXButtonComponent } from '../panel-x-button/panel-x-button.component';
 import { PanelMaxButtonComponent } from '../panel-max-button/panel-max-button.component';
@@ -19,10 +19,10 @@ export class PanelComponent {
   public height = input<string>();
   public barHeight = input<string>();
   public barPadding = input<string>();
-  public basePadding = input<string>();
+  public bodyPadding = input<string>();
   public borderRadius = input<string>();
   public barBorderWidth = input<string>();
-  public baseBorderWidth = input<string>();
+  public bodyBorderWidth = input<string>();
   public allowDrag = input(false, { transform: booleanAttribute });
   public barHoverDisabled = input(false, { transform: booleanAttribute });
 
@@ -37,7 +37,7 @@ export class PanelComponent {
   private renderer = inject(Renderer2);
   private stopMouseDownPropagation!: boolean;
   private bar = contentChild(PanelBarComponent);
-  private base = contentChild(PanelBaseComponent);
+  private body = contentChild(PanelBodyComponent);
   private removeWindowMouseUpListener!: () => void;
   private removeWindowMouseMoveListener!: () => void;
   private xButton = contentChild(PanelXButtonComponent);
@@ -48,7 +48,7 @@ export class PanelComponent {
 
   constructor() {
     effect(() => {
-      this.setBaseHeight();
+      this.setBodyHeight();
     }, { allowSignalWrites: true })
   }
 
@@ -58,11 +58,11 @@ export class PanelComponent {
     this.setBarHeight();
     this.setPanelDrag();
     this.setBarPadding();
-    this.setBasePadding();
+    this.setBodyPadding();
     this.setBarHoverable();
     this.setBorderRadius();
     this.setBarBorderWidth();
-    this.setBaseBorderWidth();
+    this.setBodyBorderWidth();
     this.setXButtonClickSubscription();
     this.setMaxButtonClickSubscription();
     this.setMinButtonClickSubscription();
@@ -70,10 +70,10 @@ export class PanelComponent {
 
 
 
-  private setBaseHeight(): void {
+  private setBodyHeight(): void {
     if (getComputedStyle(document.documentElement).getPropertyValue('--panel-height') || this.height()) {
       const panelHeight = this.panel()?.nativeElement.offsetHeight;
-      this.base()?.setHeight(panelHeight! - this.bar()?.getHeight()!);
+      this.body()?.setHeight(panelHeight! - this.bar()?.getHeight()!);
     }
   }
 
@@ -111,9 +111,9 @@ export class PanelComponent {
 
 
 
-  private setBasePadding(): void {
-    const padding = this.basePadding() ? this.basePadding() : getComputedStyle(document.documentElement).getPropertyValue('--panel-base-padding');
-    this.base()?.setPadding(padding!);
+  private setBodyPadding(): void {
+    const padding = this.bodyPadding() ? this.bodyPadding() : getComputedStyle(document.documentElement).getPropertyValue('--panel-body-padding');
+    this.body()?.setPadding(padding!);
   }
 
 
@@ -122,7 +122,7 @@ export class PanelComponent {
     const borderRadius = this.borderRadius() ? this.borderRadius() : getComputedStyle(document.documentElement).getPropertyValue('--panel-border-radius');
     this.renderer.setStyle(this.panel()?.nativeElement, 'border-radius', borderRadius);
     this.bar()?.setBorderRadius(this.panel()?.nativeElement.style.borderTopLeftRadius!, this.panel()?.nativeElement.style.borderTopRightRadius!);
-    this.base()?.setBorderRadius(this.panel()?.nativeElement.style.borderBottomLeftRadius!, this.panel()?.nativeElement.style.borderBottomRightRadius!);
+    this.body()?.setBorderRadius(this.panel()?.nativeElement.style.borderBottomLeftRadius!, this.panel()?.nativeElement.style.borderBottomRightRadius!);
   }
 
 
@@ -134,9 +134,9 @@ export class PanelComponent {
 
 
 
-  private setBaseBorderWidth(): void {
-    const borderWidth = this.baseBorderWidth() ? this.baseBorderWidth() : getComputedStyle(document.documentElement).getPropertyValue('--panel-base-border-width');
-    this.base()?.setBorderWidth(borderWidth!);
+  private setBodyBorderWidth(): void {
+    const borderWidth = this.bodyBorderWidth() ? this.bodyBorderWidth() : getComputedStyle(document.documentElement).getPropertyValue('--panel-body-border-width');
+    this.body()?.setBorderWidth(borderWidth!);
   }
 
 

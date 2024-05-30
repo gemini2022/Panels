@@ -2,21 +2,21 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Renderer2, inject, viewChild } from '@angular/core';
 
 @Component({
-  selector: 'collapsible-panel-base',
+  selector: 'collapsible-panel-body',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './collapsible-panel-base.component.html',
-  styleUrl: './collapsible-panel-base.component.scss'
+  templateUrl: './collapsible-panel-body.component.html',
+  styleUrl: './collapsible-panel-body.component.scss'
 })
-export class CollapsiblePanelBaseComponent {
+export class CollapsiblePanelBodyComponent {
   protected padding!: string;
   private isExpanded!: boolean;
   protected borderWidth!: string;
-  private baseScrollHeight!: number;
+  private bodyScrollHeight!: number;
   private renderer = inject(Renderer2);
   protected borderBottomLeftRadius!: string;
   protected borderBottomRightRadius!: string;
-  private base = viewChild<ElementRef<HTMLElement>>('base');
+  private body = viewChild<ElementRef<HTMLElement>>('body');
 
 
   public setPadding(padding: string) {
@@ -27,7 +27,7 @@ export class CollapsiblePanelBaseComponent {
   
   public setIsExpanded(isExpanded: boolean): void {
     this.isExpanded = isExpanded;
-    this.renderer.setStyle(this.base()!.nativeElement, 'height', (isExpanded ? this.base()?.nativeElement.scrollHeight! : 0) + 'px');
+    this.renderer.setStyle(this.body()!.nativeElement, 'height', (isExpanded ? this.body()?.nativeElement.scrollHeight! : 0) + 'px');
   }
 
 
@@ -38,9 +38,9 @@ export class CollapsiblePanelBaseComponent {
 
 
   
-  protected getBaseHeight(base: HTMLElement) {
-    if (base.scrollHeight !== this.baseScrollHeight) {
-      this.baseScrollHeight = base.scrollHeight;
+  protected getBodyHeight(body: HTMLElement) {
+    if (body.scrollHeight !== this.bodyScrollHeight) {
+      this.bodyScrollHeight = body.scrollHeight;
       this.updateHeight();
     }
   }
@@ -49,9 +49,9 @@ export class CollapsiblePanelBaseComponent {
 
   private updateHeight(): void {
     if (this.isExpanded) {
-      this.renderer.setStyle(this.base()?.nativeElement, 'transition', 'none');
+      this.renderer.setStyle(this.body()?.nativeElement, 'transition', 'none');
       setTimeout(() => {
-        this.renderer.setStyle(this.base()!.nativeElement, 'height', this.base()?.nativeElement.scrollHeight! + 'px');
+        this.renderer.setStyle(this.body()!.nativeElement, 'height', this.body()?.nativeElement.scrollHeight! + 'px');
       });
     }
   }
@@ -67,8 +67,8 @@ export class CollapsiblePanelBaseComponent {
 
   public expandCollapse(isExpanded: boolean): void {
     this.isExpanded = isExpanded;
-    this.baseScrollHeight = this.base()?.nativeElement.scrollHeight!;
-    this.renderer.setStyle(this.base()?.nativeElement, 'transition', 'height 0.2s');
-    this.renderer.setStyle(this.base()!.nativeElement, 'height', isExpanded ? this.base()?.nativeElement.scrollHeight! + 'px' : 0);
+    this.bodyScrollHeight = this.body()?.nativeElement.scrollHeight!;
+    this.renderer.setStyle(this.body()?.nativeElement, 'transition', 'height 0.2s');
+    this.renderer.setStyle(this.body()!.nativeElement, 'height', isExpanded ? this.body()?.nativeElement.scrollHeight! + 'px' : 0);
   }
 }

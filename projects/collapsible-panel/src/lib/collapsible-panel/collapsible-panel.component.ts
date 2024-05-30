@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Renderer2, booleanAttribute, contentChild, inject, input, viewChild } from '@angular/core';
 import { CollapsiblePanelBarComponent } from '../collapsible-panel-bar/collapsible-panel-bar.component';
-import { CollapsiblePanelBaseComponent } from '../collapsible-panel-base/collapsible-panel-base.component';
+import { CollapsiblePanelBodyComponent } from '../collapsible-panel-body/collapsible-panel-body.component';
 import { CollapsiblePanelArrowComponent } from '../collapsible-panel-arrow/collapsible-panel-arrow.component';
 
 @Component({
@@ -17,17 +17,17 @@ export class CollapsiblePanelComponent {
   public isExpanded = input(true);
   public barHeight = input<string>();
   public barPadding = input<string>();
-  public basePadding = input<string>();
+  public bodyPadding = input<string>();
   public borderRadius = input<string>();
   public barBorderWidth = input<string>();
-  public baseBorderWidth = input<string>();
+  public bodyBorderWidth = input<string>();
   public barHoverDisabled = input(false, { transform: booleanAttribute });
 
   // Private
   private _isExpanded!: boolean;
   private renderer = inject(Renderer2);
   private bar = contentChild(CollapsiblePanelBarComponent);
-  private base = contentChild(CollapsiblePanelBaseComponent);
+  private body = contentChild(CollapsiblePanelBodyComponent);
   private panel = viewChild<ElementRef<HTMLElement>>('panel');
   private arrow = contentChild(CollapsiblePanelArrowComponent);
 
@@ -37,11 +37,11 @@ export class CollapsiblePanelComponent {
     this.setBarHeight();
     this.setIsExpanded();
     this.setBarPadding();
-    this.setBasePadding();
+    this.setBodyPadding();
     this.setBarHoverable();
     this.setBorderRadius();
     this.setBarBorderWidth();
-    this.setBaseBorderWidth();
+    this.setBodyBorderWidth();
     this.setBarClickSubscription();
   }
 
@@ -55,7 +55,7 @@ export class CollapsiblePanelComponent {
 
   private setIsExpanded(): void {
     this._isExpanded = this.isExpanded();
-    this.base()?.setIsExpanded(this._isExpanded);
+    this.body()?.setIsExpanded(this._isExpanded);
     this.arrow()?.setIsExpanded(this._isExpanded);
   }
 
@@ -78,7 +78,7 @@ export class CollapsiblePanelComponent {
     const borderRadius = this.borderRadius() ? this.borderRadius() : getComputedStyle(document.documentElement).getPropertyValue('--collapsible-panel-border-radius');
     this.renderer.setStyle(this.panel()?.nativeElement, 'border-radius', borderRadius);
     this.bar()?.setBorderRadius(this.panel()?.nativeElement.style.borderTopLeftRadius!, this.panel()?.nativeElement.style.borderTopRightRadius!);
-    this.base()?.setBorderRadius(this.panel()?.nativeElement.style.borderBottomLeftRadius!, this.panel()?.nativeElement.style.borderBottomRightRadius!);
+    this.body()?.setBorderRadius(this.panel()?.nativeElement.style.borderBottomLeftRadius!, this.panel()?.nativeElement.style.borderBottomRightRadius!);
   }
 
 
@@ -90,16 +90,16 @@ export class CollapsiblePanelComponent {
 
 
 
-  private setBasePadding(): void {
-    const padding = this.basePadding() ? this.basePadding() : getComputedStyle(document.documentElement).getPropertyValue('--collapsible-panel-base-padding');
-    this.base()?.setPadding(padding!);
+  private setBodyPadding(): void {
+    const padding = this.bodyPadding() ? this.bodyPadding() : getComputedStyle(document.documentElement).getPropertyValue('--collapsible-panel-body-padding');
+    this.body()?.setPadding(padding!);
   }
 
 
 
-  private setBaseBorderWidth(): void {
-    const borderWidth = this.baseBorderWidth() ? this.baseBorderWidth() : getComputedStyle(document.documentElement).getPropertyValue('--collapsible-panel-base-border-width');
-    this.base()?.setBorderWidth(borderWidth!);
+  private setBodyBorderWidth(): void {
+    const borderWidth = this.bodyBorderWidth() ? this.bodyBorderWidth() : getComputedStyle(document.documentElement).getPropertyValue('--collapsible-panel-body-border-width');
+    this.body()?.setBorderWidth(borderWidth!);
   }
 
 
@@ -107,7 +107,7 @@ export class CollapsiblePanelComponent {
   private setBarClickSubscription(): void {
     this.bar()?.clickedEvent.subscribe(() => {
       this._isExpanded = !this._isExpanded;
-      this.base()?.expandCollapse(this._isExpanded);
+      this.body()?.expandCollapse(this._isExpanded);
       this.arrow()?.expandCollapse(this._isExpanded);
     })
   }

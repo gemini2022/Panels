@@ -1,8 +1,8 @@
 import { Component, viewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ButtonGroupComponent } from 'button-group';
-import { CollapsiblePanelArrowComponent, CollapsiblePanelBarComponent, CollapsiblePanelBaseComponent, CollapsiblePanelComponent, CollapsiblePanelTitleComponent } from 'collapsible-panel';
-import { PanelBarComponent, PanelMaxButtonComponent, PanelMinButtonComponent, PanelXButtonComponent, PanelBaseComponent, PanelComponent, PanelTitleComponent } from 'panel';
+import { CollapsiblePanelArrowComponent, CollapsiblePanelBarComponent, CollapsiblePanelBodyComponent, CollapsiblePanelComponent, CollapsiblePanelTitleComponent } from 'collapsible-panel';
+import { PanelBarComponent, PanelMaxButtonComponent, PanelMinButtonComponent, PanelXButtonComponent, PanelBodyComponent, PanelComponent, PanelTitleComponent } from 'panel';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ import { PanelBarComponent, PanelMaxButtonComponent, PanelMinButtonComponent, Pa
     RouterOutlet,
     PanelComponent,
     PanelBarComponent,
-    PanelBaseComponent,
+    PanelBodyComponent,
     PanelTitleComponent,
     ButtonGroupComponent,
     PanelXButtonComponent,
@@ -20,7 +20,7 @@ import { PanelBarComponent, PanelMaxButtonComponent, PanelMinButtonComponent, Pa
 
     CollapsiblePanelComponent,
     CollapsiblePanelBarComponent,
-    CollapsiblePanelBaseComponent,
+    CollapsiblePanelBodyComponent,
     CollapsiblePanelTitleComponent,
     CollapsiblePanelArrowComponent
   ],

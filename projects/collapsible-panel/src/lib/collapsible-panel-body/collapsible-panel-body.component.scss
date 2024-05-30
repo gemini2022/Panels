@@ -18,7 +18,7 @@
 
 
 .border {
-    background: var(--collapsible-panel-base-border-color);
+    background: var(--collapsible-panel-body-border-color);
     border-bottom-left-radius: var(--collapsible-panel-border-bottom-left-radius);
     border-bottom-right-radius: var(--collapsible-panel-border-bottom-right-radius);
 }
@@ -26,7 +26,7 @@
 
 
 .background {
-    background: var(--collapsible-panel-base-background-color);
+    background: var(--collapsible-panel-body-background-color);
     border-bottom-left-radius: calc(var(--collapsible-panel-border-bottom-left-radius) - 1px);
     border-bottom-right-radius: calc(var(--collapsible-panel-border-bottom-right-radius) - 1px);
 }

@@ -2,16 +2,16 @@ import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 
 @Component({
-  selector: 'panel-base',
+  selector: 'panel-body',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './panel-base.component.html',
-  styleUrl: './panel-base.component.scss'
+  templateUrl: './panel-body.component.html',
+  styleUrl: './panel-body.component.scss'
 })
-export class PanelBaseComponent {
+export class PanelBodyComponent {
   protected padding!: string;
   protected borderWidth!: string;
-  protected baseHeight = signal(-1);
+  protected bodyHeight = signal(-1);
   protected borderBottomLeftRadius!: string;
   protected borderBottomRightRadius!: string;
 
@@ -28,8 +28,8 @@ export class PanelBaseComponent {
 
 
 
-  public setHeight(baseHeight: number): void {
-    this.baseHeight.set(baseHeight);
+  public setHeight(bodyHeight: number): void {
+    this.bodyHeight.set(bodyHeight);
   }
 
 
