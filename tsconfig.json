@@ -19,6 +19,9 @@
       "collapsible-panel": [
         "./dist/collapsible-panel"
       ],
+      "draggable-panel": [
+        "./dist/draggable-panel"
+      ],
       "panel": [
         "./dist/panel"
       ]

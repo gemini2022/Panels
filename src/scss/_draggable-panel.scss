@@ -1,0 +1,180 @@
+:root {
+
+    /* ===================== (DIMENSIONS) ===================== */
+
+    /* Panel */
+    --draggable-panel-width: 400px;
+    --draggable-panel-border-radius: 7px 7px 7px 7px;
+    --draggable-panel-drop-shadow: 8px 8px 10px rgba(0, 0, 0, 0.13);
+    /* --draggable-panel-height: 400px; (optional) */
+
+
+    /* Panel Bar */
+    --draggable-panel-bar-height: 28px;
+    --draggable-panel-bar-cursor: default;
+    --draggable-panel-bar-border-width: 1px;
+    --draggable-panel-bar-padding: 0 7px 0 10px;
+    --draggable-panel-bar-hover-cursor: pointer;
+    --draggable-panel-bar-drop-shadow-blur: 2px;
+    --draggable-panel-bar-drop-shadow-height: 2px;
+    --draggable-panel-bar-justify-content: space-between;
+    --draggable-panel-bar-drop-shadow-color: rgba(0, 0, 0, 0.2);
+
+
+    /* Panel Title */
+    --draggable-panel-title-font-size: 14px;
+    --draggable-panel-title-font-weight: normal;
+    --draggable-panel-title-font-family: Arial, Helvetica, sans-serif;
+
+
+
+    /* Panel Bar Buttons */
+    --draggable-panel-bar-button-radius: 5px;
+    --draggable-panel-bar-button-width: 20px;
+    --draggable-panel-bar-button-height: 20px;
+    --draggable-panel-bar-button-cursor: default;
+    --draggable-panel-bar-button-hover-cursor: pointer;
+    --draggable-panel-bar-button-disabled-opacity: 0.3;
+        /* X Button */
+        --draggable-panel-x-button-icon: close;
+        --draggable-panel-x-button-tooltip: Close;
+        --draggable-panel-x-button-icon-font-size: 18px;
+        /* Max Button */
+        --draggable-panel-max-button-icon: stack; /* check_box_outline_blank */
+        --draggable-panel-max-button-tooltip: Restore Down;
+        --draggable-panel-max-button-icon-font-size: 14px;
+        /* Min Button */
+        --draggable-panel-min-button-icon: remove;
+        --draggable-panel-min-button-tooltip: Minimize;
+        --draggable-panel-min-button-icon-font-size: 18px;
+        
+    
+    /* Panel Body */
+    --draggable-panel-body-padding: 10px;
+    --draggable-panel-body-border-width: 0 1px 1px 1px;
+
+    
+
+
+    /* ===================== (COLORS) ===================== */
+
+    /* Panel Bar */
+    --draggable-panel-bar-border-color: linear-gradient(#cecece, #a1a1a1);
+    --draggable-panel-bar-background-color: linear-gradient(#e0e0e0, #c9c9c9);
+
+
+    /* Panel Bar X Button */
+    --draggable-panel-x-button-icon-color: #646464;
+    --draggable-panel-x-button-border-color: linear-gradient(#d2d2d2, #b5b5b5);
+    --draggable-panel-x-button-background-color: linear-gradient(#eaeaea, #cecece);
+
+    
+    /* Panel Bar Max Button */
+    --draggable-panel-max-button-icon-color: #646464;
+    --draggable-panel-max-button-border-color: linear-gradient(#d2d2d2, #b5b5b5);
+    --draggable-panel-max-button-background-color: linear-gradient(#eaeaea, #cecece);
+
+
+    /* Panel Bar Min Button */
+    --draggable-panel-min-button-icon-color: #646464;
+    --draggable-panel-min-button-border-color: linear-gradient(#d2d2d2, #b5b5b5);
+    --draggable-panel-min-button-background-color: linear-gradient(#eaeaea, #cecece);
+
+
+    /* Panel Title */
+    --draggable-panel-title-text-color: #404040;
+
+
+    /* Panel Body */
+    --draggable-panel-body-border-color: #c5c5c5;
+    --draggable-panel-body-background-color: #e0e0e0;
+
+
+
+
+    /* ===================== (HOVER COLORS) ===================== */
+
+    /* Panel Bar */
+    --draggable-panel-bar-border-hover-color: linear-gradient(#c6c6c6, #9c9c9c);
+    --draggable-panel-bar-background-hover-color: linear-gradient(rgb(218, 218, 218), rgb(195, 195, 195));
+        /* X Button */
+        --draggable-panel-x-button-icon-color-on-panel-bar-hover: rgb(58, 58, 58);
+        --draggable-panel-x-button-border-color-on-panel-bar-hover: linear-gradient(rgb(204, 204, 204), rgb(175, 175, 175));
+        --draggable-panel-x-button-background-color-on-panel-bar-hover: linear-gradient(rgb(228, 228, 228), rgb(200, 200, 200));
+        /* Max Button */
+        --draggable-panel-max-button-icon-color-on-panel-bar-hover: rgb(58, 58, 58);
+        --draggable-panel-max-button-border-color-on-panel-bar-hover: linear-gradient(rgb(204, 204, 204), rgb(175, 175, 175));
+        --draggable-panel-max-button-background-color-on-panel-bar-hover: linear-gradient(rgb(228, 228, 228), rgb(200, 200, 200));
+        /* Min Button */
+        --draggable-panel-min-button-icon-color-on-panel-bar-hover: rgb(58, 58, 58);
+        --draggable-panel-min-button-border-color-on-panel-bar-hover: linear-gradient(rgb(204, 204, 204), rgb(175, 175, 175));
+        --draggable-panel-min-button-background-color-on-panel-bar-hover: linear-gradient(rgb(228, 228, 228), rgb(200, 200, 200));
+        
+
+
+
+    /* Panel Bar X Button */
+    --draggable-panel-x-button-icon-hover-color: #dddddd;
+    --draggable-panel-x-button-border-hover-color: linear-gradient(#ce747c, #b4454e);
+    --draggable-panel-x-button-background-hover-color: linear-gradient(#e9828b, #d14f5a);
+
+
+    /* Panel Bar Max Button */
+    --draggable-panel-max-button-icon-hover-color: rgb(75, 75, 75);
+    --draggable-panel-max-button-border-hover-color: linear-gradient(rgb(213, 213, 213), rgb(184, 184, 184));
+    --draggable-panel-max-button-background-hover-color: linear-gradient(rgb(240, 240, 240), rgb(212, 212, 212));
+
+
+    /* Panel Bar Min Button */
+    --draggable-panel-min-button-icon-hover-color: rgb(75, 75, 75);
+    --draggable-panel-min-button-border-hover-color: linear-gradient(rgb(213, 213, 213), rgb(184, 184, 184));
+    --draggable-panel-min-button-background-hover-color: linear-gradient(rgb(240, 240, 240), rgb(212, 212, 212));
+
+    
+
+    /* Panel Title */
+    --draggable-panel-title-text-hover-color: #000000;
+
+
+
+    /* ===================== (ACTIVE COLORS) ===================== */
+
+    /* Panel Bar X Button */
+    --draggable-panel-x-button-icon-active-color: #f1f1f1;
+    --draggable-panel-x-button-border-active-color: linear-gradient(#d47980, #c04b54);
+    --draggable-panel-x-button-background-active-color: linear-gradient(#f18790, #df545f);
+
+
+    /* Panel Bar Max Button */
+    --draggable-panel-max-button-icon-active-color: rgb(81, 81, 81);
+    --draggable-panel-max-button-border-active-color: linear-gradient(rgb(219, 219, 219), rgb(190, 190, 190));
+    --draggable-panel-max-button-background-active-color: linear-gradient(rgb(246, 246, 246), rgb(218, 218, 218));
+
+
+    /* Panel Bar Min Button */
+    --draggable-panel-min-button-icon-active-color: rgb(81, 81, 81);
+    --draggable-panel-min-button-border-active-color: linear-gradient(rgb(219, 219, 219), rgb(190, 190, 190));
+    --draggable-panel-min-button-background-active-color: linear-gradient(rgb(246, 246, 246), rgb(218, 218, 218));
+
+
+
+
+    /* ===================== (DISABLED COLORS) ===================== */
+
+    /* Panel Bar X Button */
+    --draggable-panel-x-button-icon-disabled-color: rgb(186, 186, 186);
+    --draggable-panel-x-button-border-disabled-color: linear-gradient(rgb(217, 217, 217), rgb(198, 198, 198));
+    --draggable-panel-x-button-background-disabled-color: linear-gradient(rgb(224, 224, 224), rgb(197, 197, 197));
+
+
+    /* Panel Bar Max Button */
+    --draggable-panel-max-button-icon-disabled-color: rgb(186, 186, 186);
+    --draggable-panel-max-button-border-disabled-color: linear-gradient(rgb(217, 217, 217), rgb(198, 198, 198));
+    --draggable-panel-max-button-background-disabled-color: linear-gradient(rgb(224, 224, 224), rgb(197, 197, 197));
+
+
+    /* Panel Bar Min Button */
+    --draggable-panel-min-button-icon-disabled-color: rgb(186, 186, 186);
+    --draggable-panel-min-button-border-disabled-color: linear-gradient(rgb(217, 217, 217), rgb(198, 198, 198));
+    --draggable-panel-min-button-background-disabled-color: linear-gradient(rgb(224, 224, 224), rgb(197, 197, 197));
+}

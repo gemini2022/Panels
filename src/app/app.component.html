@@ -1,25 +1,36 @@
 <!-- <button (click)="onClick()">Click Me!</button> -->
 
-<div style="display: flex;">
+<div style="display: flex; justify-content: space-between; padding: 50px;">
 
-  <div style="width: 500px;">
 
-    <panel allowDrag>
-      <panel-bar>
-        <panel-title>My Panel</panel-title>
-        <button-group width="80px">
-          <panel-min-button></panel-min-button>
-          <panel-max-button [icon]="maxButtonIcon" [tooltip]="maxButtonTooltip"></panel-max-button>
-          <panel-x-button></panel-x-button>
-        </button-group>
-      </panel-bar>
-      <panel-body>
-        <div style="width: 30px; height: 30px; background: orange;"></div>
-      </panel-body>
-    </panel>
 
-  </div>
- 
+  <panel>
+    <panel-bar>
+      <panel-title>My Panel</panel-title>
+    </panel-bar>
+    <panel-body>
+      <div style="width: 30px; height: 30px; background: orange;"></div>
+    </panel-body>
+  </panel>
+
+
+
+  <draggable-panel>
+    <draggable-panel-bar>
+      <draggable-panel-title>My Draggable Panel</draggable-panel-title>
+      <button-group width="80px">
+        <draggable-panel-min-button></draggable-panel-min-button>
+        <draggable-panel-max-button></draggable-panel-max-button>
+        <draggable-panel-x-button></draggable-panel-x-button>
+      </button-group>
+    </draggable-panel-bar>
+    <draggable-panel-body>
+      <div style="width: 30px; height: 30px; background: orange;"></div>
+    </draggable-panel-body>
+  </draggable-panel>
+
+
+
 
   <collapsible-panel>
     <collapsible-panel-bar>
@@ -29,8 +40,10 @@
     <collapsible-panel-body>
       <div style="width: 30px; height: 30px; background: orange;"></div>
       @if (trumpy) {
-        <div style="width: 30px; height: 30px; background: orange;"></div>
+      <div style="width: 30px; height: 30px; background: orange;"></div>
       }
     </collapsible-panel-body>
   </collapsible-panel>
+
+
 </div>

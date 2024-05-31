@@ -17,7 +17,7 @@
     --panel-bar-hover-cursor: pointer;
     --panel-bar-drop-shadow-blur: 2px;
     --panel-bar-drop-shadow-height: 2px;
-    --panel-bar-justify-content: space-between;
+    /* --panel-bar-justify-content: space-between; */
     --panel-bar-drop-shadow-color: rgba(0, 0, 0, 0.2);
 
 
@@ -35,18 +35,7 @@
     --panel-bar-button-cursor: default;
     --panel-bar-button-hover-cursor: pointer;
     --panel-bar-button-disabled-opacity: 0.3;
-        /* X Button */
-        --panel-x-button-icon: close;
-        --panel-x-button-tooltip: Close;
-        --panel-x-button-icon-font-size: 18px;
-        /* Max Button */
-        --panel-max-button-icon: stack; /* check_box_outline_blank */
-        --panel-max-button-tooltip: Restore Down;
-        --panel-max-button-icon-font-size: 14px;
-        /* Min Button */
-        --panel-min-button-icon: remove;
-        --panel-min-button-tooltip: Minimize;
-        --panel-min-button-icon-font-size: 18px;
+        
         
     
     /* Panel Body */
@@ -63,24 +52,6 @@
     --panel-bar-background-color: linear-gradient(#e0e0e0, #c9c9c9);
 
 
-    /* Panel Bar X Button */
-    --panel-x-button-icon-color: #646464;
-    --panel-x-button-border-color: linear-gradient(#d2d2d2, #b5b5b5);
-    --panel-x-button-background-color: linear-gradient(#eaeaea, #cecece);
-
-    
-    /* Panel Bar Max Button */
-    --panel-max-button-icon-color: #646464;
-    --panel-max-button-border-color: linear-gradient(#d2d2d2, #b5b5b5);
-    --panel-max-button-background-color: linear-gradient(#eaeaea, #cecece);
-
-
-    /* Panel Bar Min Button */
-    --panel-min-button-icon-color: #646464;
-    --panel-min-button-border-color: linear-gradient(#d2d2d2, #b5b5b5);
-    --panel-min-button-background-color: linear-gradient(#eaeaea, #cecece);
-
-
     /* Panel Title */
     --panel-title-text-color: #404040;
 
@@ -88,93 +59,4 @@
     /* Panel Body */
     --panel-body-border-color: #c5c5c5;
     --panel-body-background-color: #e0e0e0;
-
-
-
-
-    /* ===================== (HOVER COLORS) ===================== */
-
-    /* Panel Bar */
-    --panel-bar-border-hover-color: linear-gradient(#c6c6c6, #9c9c9c);
-    --panel-bar-background-hover-color: linear-gradient(rgb(218, 218, 218), rgb(195, 195, 195));
-        /* X Button */
-        --panel-x-button-icon-color-on-panel-bar-hover: rgb(58, 58, 58);
-        --panel-x-button-border-color-on-panel-bar-hover: linear-gradient(rgb(204, 204, 204), rgb(175, 175, 175));
-        --panel-x-button-background-color-on-panel-bar-hover: linear-gradient(rgb(228, 228, 228), rgb(200, 200, 200));
-        /* Max Button */
-        --panel-max-button-icon-color-on-panel-bar-hover: rgb(58, 58, 58);
-        --panel-max-button-border-color-on-panel-bar-hover: linear-gradient(rgb(204, 204, 204), rgb(175, 175, 175));
-        --panel-max-button-background-color-on-panel-bar-hover: linear-gradient(rgb(228, 228, 228), rgb(200, 200, 200));
-        /* Min Button */
-        --panel-min-button-icon-color-on-panel-bar-hover: rgb(58, 58, 58);
-        --panel-min-button-border-color-on-panel-bar-hover: linear-gradient(rgb(204, 204, 204), rgb(175, 175, 175));
-        --panel-min-button-background-color-on-panel-bar-hover: linear-gradient(rgb(228, 228, 228), rgb(200, 200, 200));
-        
-
-
-
-    /* Panel Bar X Button */
-    --panel-x-button-icon-hover-color: #dddddd;
-    --panel-x-button-border-hover-color: linear-gradient(#ce747c, #b4454e);
-    --panel-x-button-background-hover-color: linear-gradient(#e9828b, #d14f5a);
-
-
-    /* Panel Bar Max Button */
-    --panel-max-button-icon-hover-color: rgb(75, 75, 75);
-    --panel-max-button-border-hover-color: linear-gradient(rgb(213, 213, 213), rgb(184, 184, 184));
-    --panel-max-button-background-hover-color: linear-gradient(rgb(240, 240, 240), rgb(212, 212, 212));
-
-
-    /* Panel Bar Min Button */
-    --panel-min-button-icon-hover-color: rgb(75, 75, 75);
-    --panel-min-button-border-hover-color: linear-gradient(rgb(213, 213, 213), rgb(184, 184, 184));
-    --panel-min-button-background-hover-color: linear-gradient(rgb(240, 240, 240), rgb(212, 212, 212));
-
-    
-
-    /* Panel Title */
-    --panel-title-text-hover-color: #000000;
-
-
-
-    /* ===================== (ACTIVE COLORS) ===================== */
-
-    /* Panel Bar X Button */
-    --panel-x-button-icon-active-color: #f1f1f1;
-    --panel-x-button-border-active-color: linear-gradient(#d47980, #c04b54);
-    --panel-x-button-background-active-color: linear-gradient(#f18790, #df545f);
-
-
-    /* Panel Bar Max Button */
-    --panel-max-button-icon-active-color: rgb(81, 81, 81);
-    --panel-max-button-border-active-color: linear-gradient(rgb(219, 219, 219), rgb(190, 190, 190));
-    --panel-max-button-background-active-color: linear-gradient(rgb(246, 246, 246), rgb(218, 218, 218));
-
-
-    /* Panel Bar Min Button */
-    --panel-min-button-icon-active-color: rgb(81, 81, 81);
-    --panel-min-button-border-active-color: linear-gradient(rgb(219, 219, 219), rgb(190, 190, 190));
-    --panel-min-button-background-active-color: linear-gradient(rgb(246, 246, 246), rgb(218, 218, 218));
-
-
-
-
-    /* ===================== (DISABLED COLORS) ===================== */
-
-    /* Panel Bar X Button */
-    --panel-x-button-icon-disabled-color: rgb(186, 186, 186);
-    --panel-x-button-border-disabled-color: linear-gradient(rgb(217, 217, 217), rgb(198, 198, 198));
-    --panel-x-button-background-disabled-color: linear-gradient(rgb(224, 224, 224), rgb(197, 197, 197));
-
-
-    /* Panel Bar Max Button */
-    --panel-max-button-icon-disabled-color: rgb(186, 186, 186);
-    --panel-max-button-border-disabled-color: linear-gradient(rgb(217, 217, 217), rgb(198, 198, 198));
-    --panel-max-button-background-disabled-color: linear-gradient(rgb(224, 224, 224), rgb(197, 197, 197));
-
-
-    /* Panel Bar Min Button */
-    --panel-min-button-icon-disabled-color: rgb(186, 186, 186);
-    --panel-min-button-border-disabled-color: linear-gradient(rgb(217, 217, 217), rgb(198, 198, 198));
-    --panel-min-button-background-disabled-color: linear-gradient(rgb(224, 224, 224), rgb(197, 197, 197));
 }

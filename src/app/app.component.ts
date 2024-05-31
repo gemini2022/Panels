@@ -2,6 +2,7 @@ import { Component, viewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ButtonGroupComponent } from 'button-group';
 import { CollapsiblePanelArrowComponent, CollapsiblePanelBarComponent, CollapsiblePanelBodyComponent, CollapsiblePanelComponent, CollapsiblePanelTitleComponent } from 'collapsible-panel';
+import { DraggablePanelBarComponent, DraggablePanelBodyComponent, DraggablePanelComponent, DraggablePanelMaxButtonComponent, DraggablePanelMinButtonComponent, DraggablePanelTitleComponent, DraggablePanelXButtonComponent } from 'draggable-panel';
 import { PanelBarComponent, PanelMaxButtonComponent, PanelMinButtonComponent, PanelXButtonComponent, PanelBodyComponent, PanelComponent, PanelTitleComponent } from 'panel';
 
 @Component({
@@ -22,7 +23,15 @@ import { PanelBarComponent, PanelMaxButtonComponent, PanelMinButtonComponent, Pa
     CollapsiblePanelBarComponent,
     CollapsiblePanelBodyComponent,
     CollapsiblePanelTitleComponent,
-    CollapsiblePanelArrowComponent
+    CollapsiblePanelArrowComponent,
+
+    DraggablePanelComponent,
+    DraggablePanelBarComponent,
+    DraggablePanelBodyComponent,
+    DraggablePanelTitleComponent,
+    DraggablePanelXButtonComponent,
+    DraggablePanelMaxButtonComponent,
+    DraggablePanelMinButtonComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -36,10 +45,10 @@ export class AppComponent {
   trumpy!: boolean;
 
   private ngOnInit(): void {
-    this.panel()?.maxButtonClickedEvent.subscribe(() => {
-      this.maxButtonIcon = this.maxButtonIcon === 'stack' ? 'check_box_outline_blank' : 'stack';
-      this.maxButtonTooltip = this.maxButtonTooltip === 'Restore Down' ? 'Maximize' : 'Restore Down';
-    })
+    // this.panel()?.maxButtonClickedEvent.subscribe(() => {
+    //   this.maxButtonIcon = this.maxButtonIcon === 'stack' ? 'check_box_outline_blank' : 'stack';
+    //   this.maxButtonTooltip = this.maxButtonTooltip === 'Restore Down' ? 'Maximize' : 'Restore Down';
+    // })
   }
 
 

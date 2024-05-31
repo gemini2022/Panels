@@ -162,6 +162,39 @@
           }
         }
       }
+    },
+    "draggable-panel": {
+      "projectType": "library",
+      "root": "projects/draggable-panel",
+      "sourceRoot": "projects/draggable-panel/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/draggable-panel/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/draggable-panel/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/draggable-panel/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/draggable-panel/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }

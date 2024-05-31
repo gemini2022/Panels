@@ -1,0 +1,48 @@
+.container {
+    cursor: var(--draggable-panel-bar-cursor);
+
+    &:hover:not(.no-hover) {
+        cursor: var(--draggable-panel-bar-hover-cursor);
+
+        .border {
+            background: var(--draggable-panel-bar-border-hover-color);
+        }
+
+        .background {
+            background: var(--draggable-panel-bar-background-hover-color);
+        }
+        --draggable-panel-title-text-color: var(--draggable-panel-title-text-hover-color);
+
+        --draggable-panel-x-button-icon-color: var(--draggable-panel-x-button-icon-color-on-panel-bar-hover);
+        --draggable-panel-x-button-border-color: var(--draggable-panel-x-button-border-color-on-panel-bar-hover);
+        --draggable-panel-x-button-background-color: var(--draggable-panel-x-button-background-color-on-panel-bar-hover);
+
+        --draggable-panel-max-button-icon-color: var(--draggable-panel-max-button-icon-color-on-panel-bar-hover);
+        --draggable-panel-max-button-border-color: var(--draggable-panel-max-button-border-color-on-panel-bar-hover);
+        --draggable-panel-max-button-background-color: var(--draggable-panel-max-button-background-color-on-panel-bar-hover);
+
+        --draggable-panel-min-button-icon-color: var(--draggable-panel-min-button-icon-color-on-panel-bar-hover);
+        --draggable-panel-min-button-border-color: var(--draggable-panel-min-button-border-color-on-panel-bar-hover);
+        --draggable-panel-min-button-background-color: var(--draggable-panel-min-button-background-color-on-panel-bar-hover);
+    }
+}
+
+
+.border {
+    height: var(--draggable-panel-bar-height);
+    background: var(--draggable-panel-bar-border-color);
+    border-top-left-radius: var(--draggable-panel-border-top-left-radius);
+    border-top-right-radius: var(--draggable-panel-border-top-right-radius);
+}
+
+
+
+.background {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: var(--draggable-panel-bar-background-color);
+    justify-content: var(--draggable-panel-bar-justify-content);
+    border-top-left-radius: calc(var(--draggable-panel-border-top-left-radius) - 1px);
+    border-top-right-radius: calc(var(--draggable-panel-border-top-right-radius) - 1px);
+}

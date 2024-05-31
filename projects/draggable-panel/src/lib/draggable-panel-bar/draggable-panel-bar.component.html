@@ -1,11 +1,12 @@
 <div #bar
      class="container"
-     [ngStyle]="{'height': height}">
+     [ngStyle]="{'height': height}"
+     [ngClass]="{'no-hover': hoverDisabled}">
 
    <div class="border"
         [ngStyle]="{'padding': borderWidth, 'height': height}"
-        [style]="'--panel-border-top-left-radius:' + borderTopLeftRadius + ';' +
-                 '--panel-border-top-right-radius:' + borderTopRightRadius">
+        [style]="'--draggable-panel-border-top-left-radius:' + borderTopLeftRadius + ';' +
+                 '--draggable-panel-border-top-right-radius:' + borderTopRightRadius">
 
       <div class="background"
            [ngStyle]="{'padding': padding}">
