@@ -5,6 +5,7 @@
 
 .border {
     height: var(--panel-bar-height);
+    padding: var(--panel-bar-border-width);
     background: var(--panel-bar-border-color);
     border-top-left-radius: var(--panel-border-top-left-radius);
     border-top-right-radius: var(--panel-border-top-right-radius);
@@ -16,6 +17,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    padding: var(--panel-bar-padding);
     background: var(--panel-bar-background-color);
     justify-content: var(--panel-bar-justify-content);
     border-top-left-radius: calc(var(--panel-border-top-left-radius) - 1px);

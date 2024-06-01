@@ -1,14 +1,15 @@
 <div class="container">
 
-    <div #border class="border"
-         [style.height.px]="bodyHeight"
-         [ngStyle]="{'padding': borderWidth}"
+    <div #border
+         class="border"
+         [style.height.px]="height()"
+         [ngStyle]="{'padding': borderWidth()}"
          [style]="'--panel-border-bottom-left-radius:' + borderBottomLeftRadius + ';' +
                   '--panel-border-bottom-right-radius:' + borderBottomRightRadius">
         
          <div class="background"
-              [ngStyle]="{'padding': padding}"
-              [style.height.px]="bodyHeight - getBorderBottomWidth(border)">
+              [ngStyle]="{'padding': padding()}"
+              [style.height.px]="height() - getBorderBottomWidth(border)">
             <ng-content></ng-content>
         </div>
     </div>

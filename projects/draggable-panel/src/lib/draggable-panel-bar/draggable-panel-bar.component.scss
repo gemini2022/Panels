@@ -30,6 +30,7 @@
 
 .border {
     height: var(--draggable-panel-bar-height);
+    padding: var(--draggable-panel-bar-border-width);
     background: var(--draggable-panel-bar-border-color);
     border-top-left-radius: var(--draggable-panel-border-top-left-radius);
     border-top-right-radius: var(--draggable-panel-border-top-right-radius);
@@ -41,6 +42,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    padding: var(--draggable-panel-bar-padding);
     background: var(--draggable-panel-bar-background-color);
     justify-content: var(--draggable-panel-bar-justify-content);
     border-top-left-radius: calc(var(--draggable-panel-border-top-left-radius) - 1px);

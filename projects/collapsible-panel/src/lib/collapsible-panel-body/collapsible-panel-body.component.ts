@@ -1,3 +1,4 @@
+import { PanelBodyComponent } from 'panel';
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Renderer2, inject, viewChild } from '@angular/core';
 
@@ -8,23 +9,13 @@ import { Component, ElementRef, Renderer2, inject, viewChild } from '@angular/co
   templateUrl: './collapsible-panel-body.component.html',
   styleUrl: './collapsible-panel-body.component.scss'
 })
-export class CollapsiblePanelBodyComponent {
-  protected padding!: string;
+export class CollapsiblePanelBodyComponent extends PanelBodyComponent {
   private isExpanded!: boolean;
-  protected borderWidth!: string;
   private bodyScrollHeight!: number;
   private renderer = inject(Renderer2);
-  protected borderBottomLeftRadius!: string;
-  protected borderBottomRightRadius!: string;
   private body = viewChild<ElementRef<HTMLElement>>('body');
 
 
-  public setPadding(padding: string) {
-    this.padding = padding;
-  }
-  
-  
-  
   public setIsExpanded(isExpanded: boolean): void {
     this.isExpanded = isExpanded;
     this.renderer.setStyle(this.body()!.nativeElement, 'height', (isExpanded ? this.body()?.nativeElement.scrollHeight! : 0) + 'px');
@@ -32,13 +23,7 @@ export class CollapsiblePanelBodyComponent {
 
 
 
-  public setBorderWidth(borderWidth: string) {
-    this.borderWidth = borderWidth;
-  }
-
-
-  
-  protected getBodyHeight(body: HTMLElement) {
+  protected getHeight(body: HTMLElement) {
     if (body.scrollHeight !== this.bodyScrollHeight) {
       this.bodyScrollHeight = body.scrollHeight;
       this.updateHeight();
@@ -54,13 +39,6 @@ export class CollapsiblePanelBodyComponent {
         this.renderer.setStyle(this.body()!.nativeElement, 'height', this.body()?.nativeElement.scrollHeight! + 'px');
       });
     }
-  }
-
-
-
-  public setBorderRadius(borderBottomLeftRadius: string, borderBottomRightRadius: string) {
-    this.borderBottomLeftRadius = borderBottomLeftRadius;
-    this.borderBottomRightRadius = borderBottomRightRadius;
   }
 
 

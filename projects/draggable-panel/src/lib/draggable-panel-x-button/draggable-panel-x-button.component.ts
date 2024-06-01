@@ -22,6 +22,7 @@ export class DraggablePanelXButtonComponent {
   // Private
   protected _icon!: string;
   protected _tooltip!: string;
+  protected _buttonType: string = 'x';
 
 
   constructor() {
@@ -34,12 +35,12 @@ export class DraggablePanelXButtonComponent {
 
 
   private setIcon(): void {
-    this._icon = this.icon() ? this.icon()! : getComputedStyle(document.documentElement).getPropertyValue('--draggable-panel-x-button-icon');
+    this._icon = this.icon() ? this.icon()! : getComputedStyle(document.documentElement).getPropertyValue('--draggable-panel-' + this._buttonType + '-button-icon');
   }
 
 
 
   private setTooltip(): void {
-    this._tooltip = this.tooltip() ? this.tooltip()! : getComputedStyle(document.documentElement).getPropertyValue('--draggable-panel-x-button-tooltip');
+    this._tooltip = this.tooltip() ? this.tooltip()! : getComputedStyle(document.documentElement).getPropertyValue('--draggable-panel-' + this._buttonType + '-button-tooltip');
   }
 }

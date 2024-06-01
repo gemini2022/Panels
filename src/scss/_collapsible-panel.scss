@@ -6,6 +6,7 @@
     --collapsible-panel-width: 400px;
     --collapsible-panel-border-radius: 7px 7px 7px 7px;
     /* --collapsible-panel-drop-shadow: 8px 8px 10px rgba(0, 0, 0, 0.13); */
+    /* --collapsible-panel-height: 400px; //(optional) */
 
 
     /* Panel Bar */
@@ -16,7 +17,7 @@
     --collapsible-panel-bar-hover-cursor: pointer;
     --collapsible-panel-bar-drop-shadow-blur: 2px;
     --collapsible-panel-bar-drop-shadow-height: 2px;
-    /* --collapsible-panel-justify-content: space-between; */
+    /* --collapsible-panel-bar-justify-content: space-between; */
     --collapsible-panel-bar-drop-shadow-color: rgba(0, 0, 0, 0.2);
 
 
@@ -32,12 +33,12 @@
     --collapsible-panel-title-font-weight: normal;
     --collapsible-panel-title-font-family: Arial, Helvetica, sans-serif;
 
-    
+
     /* Panel Body */
     --collapsible-panel-body-padding: 10px;
     --collapsible-panel-body-border-width: 0 1px 1px 1px;
 
-    
+
 
 
     /* ===================== (COLORS) ===================== */
@@ -51,8 +52,8 @@
     --collapsible-panel-title-text-color: #404040;
 
 
-     /* Panel Arrow */
-     --collapsible-panel-arrow-color: #404040;
+    /* Panel Arrow */
+    --collapsible-panel-arrow-color: #404040;
 
 
     /* Panel Body */
@@ -67,9 +68,9 @@
     /* Panel Bar */
     --collapsible-panel-bar-border-hover-color: linear-gradient(#c6c6c6, #9c9c9c);
     --collapsible-panel-bar-background-hover-color: linear-gradient(#dadada, #c3c3c3);
-        /* Arrow */
-        --collapsible-panel-arrow-color-on-panel-bar-hover: #000000;
-    
+    /* Arrow */
+    --collapsible-panel-arrow-color-on-panel-bar-hover: #000000;
+
 
     /* Panel Title */
     --collapsible-panel-title-text-hover-color: #000000;

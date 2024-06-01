@@ -1,5 +1,4 @@
 .container {
-    // position: relative;
     cursor: var(--collapsible-panel-bar-cursor);
 
     &:hover:not(.no-hover) {
@@ -20,6 +19,7 @@
 
 .border {
     height: var(--collapsible-panel-bar-height);
+    padding: var(--collapsible-panel-bar-border-width);
     background: var(--collapsible-panel-bar-border-color);
     border-top-left-radius: var(--collapsible-panel-border-top-left-radius);
     border-top-right-radius: var(--collapsible-panel-border-top-right-radius);
@@ -31,8 +31,9 @@
     height: 100%;
     display: flex;
     align-items: center;
+    padding: var(--collapsible-panel-bar-padding);
     background: var(--collapsible-panel-bar-background-color);
-    justify-content: var(--collapsible-panel-justify-content);
+    justify-content: var(--collapsible-panel-bar-justify-content);
     border-top-left-radius: calc(var(--collapsible-panel-border-top-left-radius) - 1px);
     border-top-right-radius: calc(var(--collapsible-panel-border-top-right-radius) - 1px);
 }

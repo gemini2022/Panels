@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Renderer2, inject, output, viewChild } from '@angular/core';
+import { Component, ElementRef, input, viewChild } from '@angular/core';
 
 @Component({
   selector: 'panel-bar',
@@ -9,35 +9,20 @@ import { Component, ElementRef, Renderer2, inject, output, viewChild } from '@an
   styleUrl: './panel-bar.component.scss'
 })
 export class PanelBarComponent {
+  // Inputs
+  public height = input<string>();
+  public padding = input<string>();
+  public borderWidth = input<string>();
+
   // Private
-  protected height!: string;
-  protected padding!: string;
-  protected borderWidth!: string;
   protected borderTopLeftRadius!: string;
   protected borderTopRightRadius!: string;
-  private bar = viewChild<ElementRef<HTMLElement>>('bar');
+  protected bar = viewChild<ElementRef<HTMLElement>>('bar');
 
+  
   
   public getHeight(): number {
     return this.bar()?.nativeElement.offsetHeight!;
-  }
-
-
-
-  public setHeight(barHeight: string): void {
-    this.height = barHeight;
-  }
-
-
-
-  public setPadding(padding: string) {
-    this.padding = padding;
-  }
-
-
-
-  public setBorderWidth(borderWidth: string) {
-    this.borderWidth = borderWidth;
   }
 
 

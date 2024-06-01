@@ -1,7 +1,6 @@
-<!-- <button (click)="onClick()">Click Me!</button> -->
+<button (click)="onClick()">Toggle Collapsible Panel Content</button>
 
 <div style="display: flex; justify-content: space-between; padding: 50px;">
-
 
 
   <panel>
@@ -20,7 +19,7 @@
       <draggable-panel-title>My Draggable Panel</draggable-panel-title>
       <button-group width="80px">
         <draggable-panel-min-button></draggable-panel-min-button>
-        <draggable-panel-max-button></draggable-panel-max-button>
+        <draggable-panel-max-button [icon]="maxButtonIcon" [tooltip]="maxButtonTooltip"></draggable-panel-max-button>
         <draggable-panel-x-button></draggable-panel-x-button>
       </button-group>
     </draggable-panel-bar>
@@ -39,11 +38,10 @@
     </collapsible-panel-bar>
     <collapsible-panel-body>
       <div style="width: 30px; height: 30px; background: orange;"></div>
-      @if (trumpy) {
-      <div style="width: 30px; height: 30px; background: orange;"></div>
+
+      @if (moreContent) {
+        <div style="width: 30px; height: 30px; background: orange;"></div>
       }
     </collapsible-panel-body>
   </collapsible-panel>
-
-
 </div>

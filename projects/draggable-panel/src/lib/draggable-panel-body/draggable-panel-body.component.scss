@@ -18,6 +18,7 @@
 
 
 .border {
+    padding: var(--draggable-panel-body-border-width);
     background: var(--draggable-panel-body-border-color);
     border-bottom-left-radius: var(--draggable-panel-border-bottom-left-radius);
     border-bottom-right-radius: var(--draggable-panel-border-bottom-right-radius);
@@ -26,6 +27,7 @@
 
 
 .background {
+    padding: var(--draggable-panel-body-padding);
     background: var(--draggable-panel-body-background-color);
     border-bottom-left-radius: calc(var(--draggable-panel-border-bottom-left-radius) - 1px);
     border-bottom-right-radius: calc(var(--draggable-panel-border-bottom-right-radius) - 1px);

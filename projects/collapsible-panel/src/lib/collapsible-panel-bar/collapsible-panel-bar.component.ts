@@ -1,5 +1,6 @@
+import { PanelBarComponent } from 'panel';
 import { CommonModule } from '@angular/common';
-import { Component, output } from '@angular/core';
+import { Component, booleanAttribute, input, output } from '@angular/core';
 
 @Component({
   selector: 'collapsible-panel-bar',
@@ -8,46 +9,10 @@ import { Component, output } from '@angular/core';
   templateUrl: './collapsible-panel-bar.component.html',
   styleUrl: './collapsible-panel-bar.component.scss'
 })
-export class CollapsiblePanelBarComponent {
+export class CollapsiblePanelBarComponent extends PanelBarComponent {
+  // Input
+  public hoverDisabled = input(false, { transform: booleanAttribute });
+
   // Output
   public clickedEvent = output();
-
-  // Private
-  protected height!: string;
-  protected padding!: string;
-  protected borderWidth!: string;
-  protected hoverDisabled!: boolean;
-  protected borderTopLeftRadius!: string;
-  protected borderTopRightRadius!: string;
-
-
-
-  public setHeight(barHeight: string): void {
-    this.height = barHeight;
-  }
-
-
-
-  public setPadding(padding: string) {
-    this.padding = padding;
-  }
-
-
-
-  public setBorderWidth(borderWidth: string) {
-    this.borderWidth = borderWidth;
-  }
-
-
-
-  public disableHover(hoverDisabled: boolean): void {
-    this.hoverDisabled = hoverDisabled;
-  }
-
-
-
-  public setBorderRadius(borderTopLeftRadius: string, borderTopRightRadius: string) {
-    this.borderTopLeftRadius = borderTopLeftRadius;
-    this.borderTopRightRadius = borderTopRightRadius;
-  }
 }

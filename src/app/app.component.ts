@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { ButtonGroupComponent } from 'button-group';
 import { CollapsiblePanelArrowComponent, CollapsiblePanelBarComponent, CollapsiblePanelBodyComponent, CollapsiblePanelComponent, CollapsiblePanelTitleComponent } from 'collapsible-panel';
 import { DraggablePanelBarComponent, DraggablePanelBodyComponent, DraggablePanelComponent, DraggablePanelMaxButtonComponent, DraggablePanelMinButtonComponent, DraggablePanelTitleComponent, DraggablePanelXButtonComponent } from 'draggable-panel';
-import { PanelBarComponent, PanelMaxButtonComponent, PanelMinButtonComponent, PanelXButtonComponent, PanelBodyComponent, PanelComponent, PanelTitleComponent } from 'panel';
+import { PanelBarComponent, PanelBodyComponent, PanelComponent, PanelTitleComponent } from 'panel';
 
 @Component({
   selector: 'app-root',
@@ -15,9 +15,7 @@ import { PanelBarComponent, PanelMaxButtonComponent, PanelMinButtonComponent, Pa
     PanelBodyComponent,
     PanelTitleComponent,
     ButtonGroupComponent,
-    PanelXButtonComponent,
-    PanelMaxButtonComponent,
-    PanelMinButtonComponent,
+    
 
     CollapsiblePanelComponent,
     CollapsiblePanelBarComponent,
@@ -37,23 +35,22 @@ import { PanelBarComponent, PanelMaxButtonComponent, PanelMinButtonComponent, Pa
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'panels';
-  private panel = viewChild(PanelComponent);
+  protected moreContent!: boolean;
   protected maxButtonIcon: string = 'stack';
   protected maxButtonTooltip: string = 'Restore Down'
-
-  trumpy!: boolean;
+  private maxButton = viewChild(DraggablePanelMaxButtonComponent);
+  
 
   private ngOnInit(): void {
-    // this.panel()?.maxButtonClickedEvent.subscribe(() => {
-    //   this.maxButtonIcon = this.maxButtonIcon === 'stack' ? 'check_box_outline_blank' : 'stack';
-    //   this.maxButtonTooltip = this.maxButtonTooltip === 'Restore Down' ? 'Maximize' : 'Restore Down';
-    // })
+    this.maxButton()?.clickedEvent.subscribe(() => {
+      this.maxButtonIcon = this.maxButtonIcon === 'stack' ? 'check_box_outline_blank' : 'stack';
+      this.maxButtonTooltip = this.maxButtonTooltip === 'Restore Down' ? 'Maximize' : 'Restore Down';
+    })
   }
 
 
 
   onClick() {
-    this.trumpy = !this.trumpy;
+    this.moreContent = !this.moreContent;
   }
 }
