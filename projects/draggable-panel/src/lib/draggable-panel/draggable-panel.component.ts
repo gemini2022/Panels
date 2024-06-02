@@ -42,8 +42,7 @@ export class DraggablePanelComponent extends PanelComponent {
 
 
 
-  protected override ngAfterViewInit(): void {
-    super.ngAfterViewInit();
+  private ngAfterViewInit(): void {
     this.renderer.setStyle(this.host.nativeElement, 'width', this.panel()?.nativeElement.offsetWidth + 'px');
     this.renderer.setStyle(this.host.nativeElement, 'height', this.panel()?.nativeElement.offsetHeight + 'px');
   }

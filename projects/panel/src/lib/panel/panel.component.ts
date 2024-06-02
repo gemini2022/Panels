@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { PanelBarComponent } from '../panel-bar/panel-bar.component';
 import { PanelBodyComponent } from '../panel-body/panel-body.component';
-import { Component, ElementRef, Renderer2, contentChild, inject, input, viewChild } from '@angular/core';
+import { Component, ElementRef, Renderer2, contentChild, effect, inject, input, viewChild } from '@angular/core';
 
 @Component({
   selector: 'panel',
@@ -15,7 +15,7 @@ export class PanelComponent {
   public width = input<string>();
   public height = input<string>();
   public borderRadius = input<string>();
-  
+
 
   // Private
   protected _panelType: string = 'panel';
@@ -25,15 +25,16 @@ export class PanelComponent {
   protected panel = viewChild<ElementRef<HTMLElement>>('panel');
 
 
-
-  protected ngOnInit(): void {
-    this.setBorderRadius();
+  constructor() {
+    effect(() => {
+      this.setHeight();
+    }, { allowSignalWrites: true })
   }
 
 
 
-  protected ngAfterViewInit() {
-    this.setHeight();
+  protected ngOnInit(): void {
+    this.setBorderRadius();
   }
 
 
