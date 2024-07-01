@@ -37,6 +37,7 @@
 
 .border {
     padding: 1px;
+    box-sizing: border-box;
     width: var(--draggable-panel-bar-button-width);
     height: var(--draggable-panel-bar-button-height);
     border-radius: var(--draggable-panel-bar-button-radius);

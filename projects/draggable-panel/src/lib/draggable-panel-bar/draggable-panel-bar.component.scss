@@ -29,6 +29,7 @@
 
 
 .border {
+    box-sizing: border-box;
     height: var(--draggable-panel-bar-height);
     padding: var(--draggable-panel-bar-border-width);
     background: var(--draggable-panel-bar-border-color);
@@ -42,6 +43,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
     padding: var(--draggable-panel-bar-padding);
     background: var(--draggable-panel-bar-background-color);
     justify-content: var(--draggable-panel-bar-justify-content);

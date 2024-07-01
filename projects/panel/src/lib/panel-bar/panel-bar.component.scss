@@ -4,6 +4,7 @@
 
 
 .border {
+    box-sizing: border-box;
     height: var(--panel-bar-height);
     padding: var(--panel-bar-border-width);
     background: var(--panel-bar-border-color);
@@ -17,6 +18,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
     padding: var(--panel-bar-padding);
     background: var(--panel-bar-background-color);
     justify-content: var(--panel-bar-justify-content);
