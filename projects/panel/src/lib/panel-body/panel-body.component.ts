@@ -32,7 +32,13 @@ export class PanelBodyComponent {
 
 
 
+  protected getBorderTopWidth(border: HTMLElement): number {
+    return parseInt(getComputedStyle(border).paddingTop);
+  }
+
+
+
   protected getBorderBottomWidth(border: HTMLElement): number {
-    return parseInt(getComputedStyle(border).getPropertyValue('padding-bottom'));
+    return parseInt(getComputedStyle(border).paddingBottom);
   }
 }

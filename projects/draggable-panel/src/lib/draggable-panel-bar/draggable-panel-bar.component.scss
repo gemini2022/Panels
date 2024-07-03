@@ -1,7 +1,7 @@
 .container {
     cursor: var(--draggable-panel-bar-cursor);
 
-    &:hover:not(.no-hover) {
+    &:hover {
         cursor: var(--draggable-panel-bar-hover-cursor);
 
         .border {

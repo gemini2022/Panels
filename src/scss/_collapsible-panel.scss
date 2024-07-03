@@ -3,6 +3,7 @@
     /* ===================== (DIMENSIONS) ===================== */
 
     /* Panel */
+    --transition-speed: 0.2s;
     --collapsible-panel-width: 400px;
     --collapsible-panel-border-radius: 7px 7px 7px 7px;
     /* --collapsible-panel-drop-shadow: 8px 8px 10px rgba(0, 0, 0, 0.13); */
@@ -40,6 +41,7 @@
 
 
 
+    
 
     /* ===================== (COLORS) ===================== */
 
@@ -63,6 +65,7 @@
 
 
 
+
     /* ===================== (HOVER COLORS) ===================== */
 
     /* Panel Bar */
@@ -82,6 +85,20 @@
 
 
 
+
     /* ===================== (ACTIVE COLORS) ===================== */
+
+    /* Panel Bar */
+    --collapsible-panel-bar-border-active-color: linear-gradient(#bcbcbc, #969696);
+    --collapsible-panel-bar-background-active-color: linear-gradient(#d0d0d0, #bbbbbb);
+        /* Arrow */
+        --collapsible-panel-arrow-color-on-panel-bar-active: #000000;
+
+
+    /* Panel Title */
+    --collapsible-panel-title-text-active-color: #000000;
+
+
+    /* Panel Arrow */
     --collapsible-panel-arrow-active-color: #a8a8a8;
 }

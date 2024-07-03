@@ -29,6 +29,7 @@
 
 .background {
     box-sizing: border-box;
+    border-top: 1px solid transparent;
     padding: var(--draggable-panel-body-padding);
     background: var(--draggable-panel-body-background-color);
     border-bottom-left-radius: calc(var(--draggable-panel-border-bottom-left-radius) - 1px);

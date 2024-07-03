@@ -1,8 +1,7 @@
 <div #bar
      class="container"
      (click)="clickedEvent.emit()"
-     [ngStyle]="{'height': height()}"
-     [ngClass]="{'no-hover': hoverDisabled()}">
+     [ngStyle]="{'height': height()}">
 
     <div class="border"
          [ngStyle]="{'padding': borderWidth(), 'height': height()}"

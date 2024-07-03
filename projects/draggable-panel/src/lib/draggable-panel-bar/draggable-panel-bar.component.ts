@@ -10,9 +10,6 @@ import { Component, Renderer2, booleanAttribute, inject, input, output } from '@
   styleUrl: './draggable-panel-bar.component.scss'
 })
 export class DraggablePanelBarComponent extends PanelBarComponent {
-  // Input
-  public hoverDisabled = input(false, { transform: booleanAttribute });
-
   // Output
   public mouseDownedEvent = output<MouseEvent>();
 

@@ -1,6 +1,5 @@
-<div #body
-     class="container"
-     [style]="getHeight(body)">
+<div #container
+     class="container">
 
     <div #border
          class="border"
@@ -9,9 +8,10 @@
          [style]="'--collapsible-panel-border-bottom-left-radius:' + borderBottomLeftRadius + ';' +
                   '--collapsible-panel-border-bottom-right-radius:' + borderBottomRightRadius">
 
-        <div class="background"
+        <div #background class="background"
              [ngStyle]="{'padding': padding()}"
-             [style.height.px]="height() - getBorderBottomWidth(border)">
+             [style]="getHeight(background)"
+             [style.height.px]="height() - getBorderTopWidth(border) - getBorderBottomWidth(border)">
             <ng-content></ng-content>
         </div>
     </div>

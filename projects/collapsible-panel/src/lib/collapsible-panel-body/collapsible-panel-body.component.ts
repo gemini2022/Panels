@@ -10,22 +10,40 @@ import { Component, ElementRef, Renderer2, inject, viewChild } from '@angular/co
   styleUrl: './collapsible-panel-body.component.scss'
 })
 export class CollapsiblePanelBodyComponent extends PanelBodyComponent {
+  private borderTop!: number;
+  private bodyHeight!: string;
   private isExpanded!: boolean;
-  private bodyScrollHeight!: number;
+  private borderBottom!: number;
+  private newBodyHeight!: string;
+  private transitionSpeed!: string;
   private renderer = inject(Renderer2);
-  private body = viewChild<ElementRef<HTMLElement>>('body');
+  private border = viewChild<ElementRef<HTMLElement>>('border');
+  private container = viewChild<ElementRef<HTMLElement>>('container');
+  private background = viewChild<ElementRef<HTMLElement>>('background');
+
 
 
   public setIsExpanded(isExpanded: boolean): void {
     this.isExpanded = isExpanded;
-    this.renderer.setStyle(this.body()!.nativeElement, 'height', (isExpanded ? this.body()?.nativeElement.scrollHeight! : 0) + 'px');
+    this.borderTop = this.getBorderTopWidth(this.border()?.nativeElement!);
+    this.borderBottom = this.getBorderBottomWidth(this.border()?.nativeElement!);
+    this.newBodyHeight = (this.background()!.nativeElement.offsetHeight + this.borderTop + this.borderBottom) + 'px';
+    this.bodyHeight = this.newBodyHeight;
+    this.renderer.setStyle(this.container()!.nativeElement, 'height', isExpanded ? this.bodyHeight : 0);
   }
 
 
 
-  protected getHeight(body: HTMLElement) {
-    if (body.scrollHeight !== this.bodyScrollHeight) {
-      this.bodyScrollHeight = body.scrollHeight;
+  public setTransitionSpeed(transitionSpeed: string) {
+    this.transitionSpeed = transitionSpeed;
+  }
+
+
+
+  protected getHeight(background: HTMLElement) {
+    this.newBodyHeight = (background.offsetHeight + this.borderTop + this.borderBottom) + 'px';
+    if (this.bodyHeight !== this.newBodyHeight) {
+      this.bodyHeight = this.newBodyHeight;
       this.updateHeight();
     }
   }
@@ -34,9 +52,9 @@ export class CollapsiblePanelBodyComponent extends PanelBodyComponent {
 
   private updateHeight(): void {
     if (this.isExpanded) {
-      this.renderer.setStyle(this.body()?.nativeElement, 'transition', 'none');
+      this.renderer.setStyle(this.container()?.nativeElement, 'transition', 'none');
       setTimeout(() => {
-        this.renderer.setStyle(this.body()!.nativeElement, 'height', this.body()?.nativeElement.scrollHeight! + 'px');
+        this.renderer.setStyle(this.container()!.nativeElement, 'height', this.bodyHeight);
       });
     }
   }
@@ -45,8 +63,7 @@ export class CollapsiblePanelBodyComponent extends PanelBodyComponent {
 
   public expandCollapse(isExpanded: boolean): void {
     this.isExpanded = isExpanded;
-    this.bodyScrollHeight = this.body()?.nativeElement.scrollHeight!;
-    this.renderer.setStyle(this.body()?.nativeElement, 'transition', 'height 0.2s');
-    this.renderer.setStyle(this.body()!.nativeElement, 'height', isExpanded ? this.body()?.nativeElement.scrollHeight! + 'px' : 0);
+    this.renderer.setStyle(this.container()?.nativeElement, 'transition', 'height ' + this.transitionSpeed);
+    this.renderer.setStyle(this.container()!.nativeElement, 'height', isExpanded ? this.bodyHeight : 0);
   }
 }

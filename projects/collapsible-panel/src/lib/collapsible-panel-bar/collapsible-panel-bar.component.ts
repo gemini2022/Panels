@@ -10,9 +10,6 @@ import { Component, booleanAttribute, input, output } from '@angular/core';
   styleUrl: './collapsible-panel-bar.component.scss'
 })
 export class CollapsiblePanelBarComponent extends PanelBarComponent {
-  // Input
-  public hoverDisabled = input(false, { transform: booleanAttribute });
-
   // Output
   public clickedEvent = output();
 }

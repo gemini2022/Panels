@@ -8,7 +8,7 @@
         
          <div class="background"
               [ngStyle]="{'padding': padding()}"
-              [style.height.px]="height() - getBorderBottomWidth(border)">
+              [style.height.px]="height() - getBorderTopWidth(border) - getBorderBottomWidth(border)">
             <ng-content></ng-content>
         </div>
     </div>

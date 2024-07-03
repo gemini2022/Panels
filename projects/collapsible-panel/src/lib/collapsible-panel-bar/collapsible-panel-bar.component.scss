@@ -1,7 +1,7 @@
 .container {
     cursor: var(--collapsible-panel-bar-cursor);
 
-    &:hover:not(.no-hover) {
+    &:hover {
         cursor: var(--collapsible-panel-bar-hover-cursor);
 
         .border {
@@ -13,6 +13,18 @@
         }
         --collapsible-panel-title-text-color: var(--collapsible-panel-title-text-hover-color);
         --collapsible-panel-arrow-color: var(--collapsible-panel-arrow-color-on-panel-bar-hover);
+    }
+
+    &:active {
+        .border {
+            background: var(--collapsible-panel-bar-border-active-color);
+        }
+
+        .background {
+            background: var(--collapsible-panel-bar-background-active-color);
+        }
+        --collapsible-panel-title-text-color: var(--collapsible-panel-title-text-active-color);
+        --collapsible-panel-arrow-color: var(--collapsible-panel-arrow-color-on-panel-bar-active);
     }
 }
 
