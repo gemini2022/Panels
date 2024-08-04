@@ -3,24 +3,21 @@
     /* ===================== (DIMENSIONS) ===================== */
 
     /* Panel */
-    --transition-speed: 0.2s;
     --collapsible-panel-width: 400px;
-    --collapsible-panel-border-radius: 7px 7px 7px 7px;
-    /* --collapsible-panel-drop-shadow: 8px 8px 10px rgba(0, 0, 0, 0.13); */
+    --collapsible-panel-border-radius: 7px;
+    --collapsible-panel-transition-speed: 0.2s;
+    /* --collapsible-panel-drop-shadow: 7px 7px 10px rgba(0, 0, 0, 0.12); */
     /* --collapsible-panel-height: 400px; //(optional) */
 
 
     /* Panel Bar */
-    --collapsible-panel-bar-padding: 0;
     --collapsible-panel-bar-height: 24px;
     --collapsible-panel-bar-cursor: default;
     --collapsible-panel-bar-border-width: 1px;
+    --collapsible-panel-bar-padding: 0 7px 0 10px;
     --collapsible-panel-bar-hover-cursor: pointer;
-    --collapsible-panel-bar-drop-shadow-blur: 2px;
-    --collapsible-panel-bar-drop-shadow-height: 2px;
     /* --collapsible-panel-bar-justify-content: space-between; */
-    --collapsible-panel-bar-drop-shadow-color: rgba(0, 0, 0, 0.2);
-
+    --collapsible-panel-bar-drop-shadow: 0 3px 3px rgba(0, 0, 0, 0.09);
 
 
     /* Panel Arrow */
@@ -37,11 +34,11 @@
 
     /* Panel Body */
     --collapsible-panel-body-padding: 10px;
-    --collapsible-panel-body-border-width: 0 1px 1px 1px;
+    --collapsible-panel-body-border-width: 1px;
 
 
 
-    
+
 
     /* ===================== (COLORS) ===================== */
 

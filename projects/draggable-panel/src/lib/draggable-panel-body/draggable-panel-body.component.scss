@@ -1,37 +1,71 @@
-.container {
-    position: relative;
+.draggable-panel-body {
+    border: solid;
     overflow: hidden;
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        pointer-events: none;
-        height: var(--draggable-panel-bar-drop-shadow-height);
-        background: var(--draggable-panel-bar-drop-shadow-color);
-        filter: blur(var(--draggable-panel-bar-drop-shadow-blur));
-    }
+    position: relative;
 }
 
 
 
-.border {
+.panel-bar-drop-shadow {
+    width: 100%;
+    position: absolute;
+    box-shadow: var(--panel-bar-drop-shadow);
+}
+
+
+
+.draggable-panel-body-border {
     box-sizing: border-box;
     padding: var(--draggable-panel-body-border-width);
+    padding-top: 0;
     background: var(--draggable-panel-body-border-color);
-    border-bottom-left-radius: var(--draggable-panel-border-bottom-left-radius);
-    border-bottom-right-radius: var(--draggable-panel-border-bottom-right-radius);
 }
 
 
 
-.background {
+.draggable-panel-body-background {
     box-sizing: border-box;
-    border-top: 1px solid transparent;
     padding: var(--draggable-panel-body-padding);
     background: var(--draggable-panel-body-background-color);
-    border-bottom-left-radius: calc(var(--draggable-panel-border-bottom-left-radius) - 1px);
-    border-bottom-right-radius: calc(var(--draggable-panel-border-bottom-right-radius) - 1px);
 }
+
+
+
+
+// .container {
+//     position: relative;
+//     overflow: hidden;
+
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         pointer-events: none;
+//         height: var(--draggable-panel-bar-drop-shadow-height);
+//         background: var(--draggable-panel-bar-drop-shadow-color);
+//         filter: blur(var(--draggable-panel-bar-drop-shadow-blur));
+//     }
+// }
+
+
+
+// .border {
+//     box-sizing: border-box;
+//     padding: var(--draggable-panel-body-border-width);
+//     background: var(--draggable-panel-body-border-color);
+//     border-bottom-left-radius: var(--draggable-panel-border-bottom-left-radius);
+//     border-bottom-right-radius: var(--draggable-panel-border-bottom-right-radius);
+// }
+
+
+
+// .background {
+//     box-sizing: border-box;
+//     border-top: 1px solid transparent;
+//     padding: var(--draggable-panel-body-padding);
+//     background: var(--draggable-panel-body-background-color);
+//     border-bottom-left-radius: calc(var(--draggable-panel-border-bottom-left-radius) - 1px);
+//     border-bottom-right-radius: calc(var(--draggable-panel-border-bottom-right-radius) - 1px);
+// }

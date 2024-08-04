@@ -1,6 +1,23 @@
 <div #panel
+     class="collapsible-panel"
+     [ngStyle]="{'width': width()}">
+    <ng-content></ng-content>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div #panel
      class="container"
      [ngStyle]="{'width': width(),
                  'height': height()}">
     <ng-content></ng-content>
-</div>
+</div> -->

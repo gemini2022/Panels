@@ -1,10 +1,19 @@
-
-:host {
-    height: fit-content;
-}
-
-.container {
+.collapsible-panel {
     width: var(--collapsible-panel-width);
-    height: var(--collapsible-panel-height);
     box-shadow: var(--collapsible-panel-drop-shadow);
 }
+
+
+
+
+
+
+// :host {
+//     height: fit-content;
+// }
+
+// .container {
+//     width: var(--collapsible-panel-width);
+//     height: var(--collapsible-panel-height);
+//     box-shadow: var(--collapsible-panel-drop-shadow);
+// }

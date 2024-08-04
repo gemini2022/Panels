@@ -1,4 +1,26 @@
 <div #bar
+     class="collapsible-panel-bar"
+     (click)="clickedEvent.emit()">
+
+   <div #border
+        class="collapsible-panel-bar-border"
+        [ngStyle]="{'padding': borderWidth()}">
+
+      <div #background
+           class="collapsible-panel-bar-background"
+           [ngStyle]="{'padding': padding()}">
+         <ng-content></ng-content>
+      </div>
+   </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div #bar
      class="container"
      (click)="clickedEvent.emit()"
      [ngStyle]="{'height': height()}">
@@ -13,4 +35,4 @@
             <ng-content></ng-content>
         </div>
     </div>
-</div>
+</div> -->

@@ -1,37 +1,74 @@
-.container {
-    position: relative;
+.collapsible-panel-body {
+    border: solid;
     overflow: hidden;
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        pointer-events: none;
-        height: var(--collapsible-panel-bar-drop-shadow-height);
-        background: var(--collapsible-panel-bar-drop-shadow-color);
-        filter: blur(var(--collapsible-panel-bar-drop-shadow-blur));
-    }
+    position: relative;
 }
 
 
 
-.border {
+.collapsible-panel-bar-drop-shadow {
+    width: 100%;
+    position: absolute;
+    box-shadow: var(--collapsible-panel-bar-drop-shadow);
+}
+
+
+
+.collapsible-panel-body-border {
     box-sizing: border-box;
     padding: var(--collapsible-panel-body-border-width);
+    padding-top: 0;
     background: var(--collapsible-panel-body-border-color);
-    border-bottom-left-radius: var(--collapsible-panel-border-bottom-left-radius);
-    border-bottom-right-radius: var(--collapsible-panel-border-bottom-right-radius);
 }
 
 
 
-.background {
+.collapsible-panel-body-background {
     box-sizing: border-box;
-    border-top: 1px solid transparent;
     padding: var(--collapsible-panel-body-padding);
     background: var(--collapsible-panel-body-background-color);
-    border-bottom-left-radius: calc(var(--collapsible-panel-border-bottom-left-radius) - 1px);
-    border-bottom-right-radius: calc(var(--collapsible-panel-border-bottom-right-radius) - 1px);
 }
+
+
+
+
+
+
+
+// .container {
+//     position: relative;
+//     overflow: hidden;
+
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         pointer-events: none;
+//         height: var(--collapsible-panel-bar-drop-shadow-height);
+//         background: var(--collapsible-panel-bar-drop-shadow-color);
+//         filter: blur(var(--collapsible-panel-bar-drop-shadow-blur));
+//     }
+// }
+
+
+
+// .border {
+//     box-sizing: border-box;
+//     padding: var(--collapsible-panel-body-border-width);
+//     background: var(--collapsible-panel-body-border-color);
+//     border-bottom-left-radius: var(--collapsible-panel-border-bottom-left-radius);
+//     border-bottom-right-radius: var(--collapsible-panel-border-bottom-right-radius);
+// }
+
+
+
+// .background {
+//     box-sizing: border-box;
+//     border-top: 1px solid transparent;
+//     padding: var(--collapsible-panel-body-padding);
+//     background: var(--collapsible-panel-body-background-color);
+//     border-bottom-left-radius: calc(var(--collapsible-panel-border-bottom-left-radius) - 1px);
+//     border-bottom-right-radius: calc(var(--collapsible-panel-border-bottom-right-radius) - 1px);
+// }

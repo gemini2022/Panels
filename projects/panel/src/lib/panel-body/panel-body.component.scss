@@ -1,37 +1,30 @@
-.container {
-    position: relative;
+.panel-body {
+    border: solid;
     overflow: hidden;
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        pointer-events: none;
-        height: var(--panel-bar-drop-shadow-height);
-        background: var(--panel-bar-drop-shadow-color);
-        filter: blur(var(--panel-bar-drop-shadow-blur));
-    }
+    position: relative;
 }
 
 
 
-.border {
+.panel-bar-drop-shadow {
+    width: 100%;
+    position: absolute;
+    box-shadow: var(--panel-bar-drop-shadow);
+}
+
+
+
+.panel-body-border {
     box-sizing: border-box;
     padding: var(--panel-body-border-width);
+    padding-top: 0;
     background: var(--panel-body-border-color);
-    border-bottom-left-radius: var(--panel-border-bottom-left-radius);
-    border-bottom-right-radius: var(--panel-border-bottom-right-radius);
 }
 
 
 
-.background {
+.panel-body-background {
     box-sizing: border-box;
-    border-top: 1px solid transparent;
     padding: var(--panel-body-padding);
     background: var(--panel-body-background-color);
-    border-bottom-left-radius: calc(var(--panel-border-bottom-left-radius) - 1px);
-    border-bottom-right-radius: calc(var(--panel-border-bottom-right-radius) - 1px);
 }

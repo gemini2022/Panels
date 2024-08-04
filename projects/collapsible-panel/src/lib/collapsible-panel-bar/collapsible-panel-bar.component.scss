@@ -1,53 +1,115 @@
-.container {
+.collapsible-panel-bar {
+    border: solid;
     cursor: var(--collapsible-panel-bar-cursor);
 
     &:hover {
         cursor: var(--collapsible-panel-bar-hover-cursor);
 
-        .border {
+        .collapsible-panel-bar-border {
             background: var(--collapsible-panel-bar-border-hover-color);
         }
 
-        .background {
+        .collapsible-panel-bar-background {
             background: var(--collapsible-panel-bar-background-hover-color);
         }
         --collapsible-panel-title-text-color: var(--collapsible-panel-title-text-hover-color);
-        --collapsible-panel-arrow-color: var(--collapsible-panel-arrow-color-on-panel-bar-hover);
+        // --collapsible-panel-arrow-color: var(--collapsible-panel-arrow-color-on-panel-bar-hover);
     }
 
     &:active {
-        .border {
+        .collapsible-panel-bar-border {
             background: var(--collapsible-panel-bar-border-active-color);
         }
 
-        .background {
+        .collapsible-panel-bar-background {
             background: var(--collapsible-panel-bar-background-active-color);
         }
         --collapsible-panel-title-text-color: var(--collapsible-panel-title-text-active-color);
-        --collapsible-panel-arrow-color: var(--collapsible-panel-arrow-color-on-panel-bar-active);
+        // --collapsible-panel-arrow-color: var(--collapsible-panel-arrow-color-on-panel-bar-active);
     }
 }
 
 
-.border {
+.collapsible-panel-bar-border {
     box-sizing: border-box;
-    height: var(--collapsible-panel-bar-height);
     padding: var(--collapsible-panel-bar-border-width);
     background: var(--collapsible-panel-bar-border-color);
-    border-top-left-radius: var(--collapsible-panel-border-top-left-radius);
-    border-top-right-radius: var(--collapsible-panel-border-top-right-radius);
 }
 
 
 
-.background {
-    height: 100%;
+.collapsible-panel-bar-background {
     display: flex;
     align-items: center;
     box-sizing: border-box;
     padding: var(--collapsible-panel-bar-padding);
     background: var(--collapsible-panel-bar-background-color);
     justify-content: var(--collapsible-panel-bar-justify-content);
-    border-top-left-radius: calc(var(--collapsible-panel-border-top-left-radius) - 1px);
-    border-top-right-radius: calc(var(--collapsible-panel-border-top-right-radius) - 1px);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .container {
+//     cursor: var(--collapsible-panel-bar-cursor);
+
+//     &:hover {
+//         cursor: var(--collapsible-panel-bar-hover-cursor);
+
+//         .border {
+//             background: var(--collapsible-panel-bar-border-hover-color);
+//         }
+
+//         .background {
+//             background: var(--collapsible-panel-bar-background-hover-color);
+//         }
+//         --collapsible-panel-title-text-color: var(--collapsible-panel-title-text-hover-color);
+//         --collapsible-panel-arrow-color: var(--collapsible-panel-arrow-color-on-panel-bar-hover);
+//     }
+
+//     &:active {
+//         .border {
+//             background: var(--collapsible-panel-bar-border-active-color);
+//         }
+
+//         .background {
+//             background: var(--collapsible-panel-bar-background-active-color);
+//         }
+//         --collapsible-panel-title-text-color: var(--collapsible-panel-title-text-active-color);
+//         --collapsible-panel-arrow-color: var(--collapsible-panel-arrow-color-on-panel-bar-active);
+//     }
+// }
+
+
+// .border {
+//     box-sizing: border-box;
+//     height: var(--collapsible-panel-bar-height);
+//     padding: var(--collapsible-panel-bar-border-width);
+//     background: var(--collapsible-panel-bar-border-color);
+//     border-top-left-radius: var(--collapsible-panel-border-top-left-radius);
+//     border-top-right-radius: var(--collapsible-panel-border-top-right-radius);
+// }
+
+
+
+// .background {
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     box-sizing: border-box;
+//     padding: var(--collapsible-panel-bar-padding);
+//     background: var(--collapsible-panel-bar-background-color);
+//     justify-content: var(--collapsible-panel-bar-justify-content);
+//     border-top-left-radius: calc(var(--collapsible-panel-border-top-left-radius) - 1px);
+//     border-top-right-radius: calc(var(--collapsible-panel-border-top-right-radius) - 1px);
+// }

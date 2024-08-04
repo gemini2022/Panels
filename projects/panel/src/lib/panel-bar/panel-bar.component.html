@@ -1,13 +1,12 @@
 <div #bar
-     class="container"
-     [ngStyle]="{'height': height()}">
+     class="panel-bar">
 
-   <div class="border"
-        [ngStyle]="{'padding': borderWidth(), 'height': height()}"
-        [style]="'--panel-border-top-left-radius:' + borderTopLeftRadius + ';' +
-                 '--panel-border-top-right-radius:' + borderTopRightRadius">
+   <div #border
+        class="panel-bar-border"
+        [ngStyle]="{'padding': borderWidth()}">
 
-      <div class="background"
+      <div #background
+           class="panel-bar-background"
            [ngStyle]="{'padding': padding()}">
          <ng-content></ng-content>
       </div>

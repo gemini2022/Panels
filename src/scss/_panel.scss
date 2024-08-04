@@ -4,8 +4,8 @@
 
     /* Panel */
     --panel-width: 400px;
-    --panel-border-radius: 7px 7px 7px 7px;
-    --panel-drop-shadow: 8px 8px 10px rgba(0, 0, 0, 0.13);
+    --panel-border-radius: 7px;
+    --panel-drop-shadow: 7px 7px 10px rgba(0, 0, 0, 0.12);
     /* --panel-height: 400px; (optional) */
 
 
@@ -15,10 +15,8 @@
     --panel-bar-border-width: 1px;
     --panel-bar-padding: 0 7px 0 10px;
     --panel-bar-hover-cursor: pointer;
-    --panel-bar-drop-shadow-blur: 2px;
-    --panel-bar-drop-shadow-height: 2px;
-    /* --panel-bar-justify-content: space-between; */
-    --panel-bar-drop-shadow-color: rgba(0, 0, 0, 0.2);
+    --panel-bar-justify-content: space-between;
+    --panel-bar-drop-shadow: 0 3px 3px rgba(0, 0, 0, 0.09);
 
 
     /* Panel Title */
@@ -30,7 +28,7 @@
 
     /* Panel Body */
     --panel-body-padding: 10px;
-    --panel-body-border-width: 0 1px 1px 1px;
+    --panel-body-border-width: 1px;
 
 
 

@@ -1,15 +1,20 @@
-<div class="container">
+<div #body
+     class="draggable-panel-body">
 
-    <div #border class="border"
-         [style.height.px]="height()"
-         [ngStyle]="{'padding': borderWidth()}"
-         [style]="'--draggable-panel-border-bottom-left-radius:' + borderBottomLeftRadius + ';' +
-                  '--draggable-panel-border-bottom-right-radius:' + borderBottomRightRadius">
-        
-         <div class="background"
-              [ngStyle]="{'padding': padding()}"
-              [style.height.px]="height() - getBorderTopWidth(border) - getBorderBottomWidth(border)">
-            <ng-content></ng-content>
-        </div>
-    </div>
+     <div class="panel-bar-drop-shadow"
+          [style.top.px]="-barHeight"
+          [style.height.px]="barHeight">
+     </div>
+
+   <div #border
+        class="draggable-panel-body-border"
+        [ngStyle]="{'padding': borderWidth()}">
+
+      <div #background
+           class="draggable-panel-body-background"
+           [style.height.px]="height()"
+           [ngStyle]="{'padding': padding()}">
+         <ng-content></ng-content>
+      </div>
+   </div>
 </div>

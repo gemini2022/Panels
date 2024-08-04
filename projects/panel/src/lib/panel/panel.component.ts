@@ -1,7 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { PanelBarComponent } from '../panel-bar/panel-bar.component';
-import { PanelBodyComponent } from '../panel-body/panel-body.component';
-import { Component, ElementRef, Renderer2, contentChild, effect, inject, input, viewChild } from '@angular/core';
+import { Component, ElementRef, Renderer2, inject, input, viewChild } from '@angular/core';
 
 @Component({
   selector: 'panel',
@@ -16,20 +14,10 @@ export class PanelComponent {
   public height = input<string>();
   public borderRadius = input<string>();
 
-
   // Private
   protected _panelType: string = 'panel';
   protected renderer = inject(Renderer2);
-  protected bar = contentChild(PanelBarComponent);
-  protected body = contentChild(PanelBodyComponent);
   protected panel = viewChild<ElementRef<HTMLElement>>('panel');
-
-
-  constructor() {
-    effect(() => {
-      this.setHeight();
-    }, { allowSignalWrites: true })
-  }
 
 
 
@@ -39,19 +27,8 @@ export class PanelComponent {
 
 
 
-  private setHeight(): void {
-    if (getComputedStyle(document.documentElement).getPropertyValue('--' + this._panelType + '-height') || this.height()) {
-      const panelHeight = this.panel()?.nativeElement.offsetHeight;
-      this.body()?.setHeight(panelHeight! - this.bar()?.getHeight()!);
-    }
-  }
-
-
-
   private setBorderRadius(): void {
     const borderRadius = this.borderRadius() ? this.borderRadius() : getComputedStyle(document.documentElement).getPropertyValue('--' + this._panelType + '-border-radius');
     this.renderer.setStyle(this.panel()?.nativeElement, 'border-radius', borderRadius);
-    this.bar()?.setBorderRadius(this.panel()?.nativeElement.style.borderTopLeftRadius!, this.panel()?.nativeElement.style.borderTopRightRadius!);
-    this.body()?.setBorderRadius(this.panel()?.nativeElement.style.borderBottomLeftRadius!, this.panel()?.nativeElement.style.borderBottomRightRadius!);
   }
 }

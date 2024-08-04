@@ -1,6 +1,5 @@
-.container {
+.draggable-panel {
     position: absolute;
     width: var(--draggable-panel-width);
-    height: var(--draggable-panel-height);
     box-shadow: var(--draggable-panel-drop-shadow);
 }

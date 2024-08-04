@@ -1,4 +1,41 @@
-<div #container
+<div #body
+     class="collapsible-panel-body">
+
+     <div [style.top.px]="-barHeight"
+          [style.height.px]="barHeight"
+          class="collapsible-panel-bar-drop-shadow">
+     </div>
+
+   <div #border
+        class="collapsible-panel-body-border"
+        [ngStyle]="{'padding': borderWidth()}">
+
+      <div #background
+           [style.height.px]="height()"
+           [style]="getHeight(background)"
+           [ngStyle]="{'padding': padding()}"
+           class="collapsible-panel-body-background">
+         <ng-content></ng-content>
+      </div>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div #container
      class="container">
 
     <div #border
@@ -15,4 +52,4 @@
             <ng-content></ng-content>
         </div>
     </div>
-</div>
+</div> -->

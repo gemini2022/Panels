@@ -1,27 +1,22 @@
-.container {
+.panel-bar {
+    border: solid;
     cursor: var(--panel-bar-cursor);
 }
 
 
-.border {
+.panel-bar-border {
     box-sizing: border-box;
-    height: var(--panel-bar-height);
     padding: var(--panel-bar-border-width);
     background: var(--panel-bar-border-color);
-    border-top-left-radius: var(--panel-border-top-left-radius);
-    border-top-right-radius: var(--panel-border-top-right-radius);
 }
 
 
 
-.background {
-    height: 100%;
+.panel-bar-background {
     display: flex;
     align-items: center;
     box-sizing: border-box;
     padding: var(--panel-bar-padding);
     background: var(--panel-bar-background-color);
     justify-content: var(--panel-bar-justify-content);
-    border-top-left-radius: calc(var(--panel-border-top-left-radius) - 1px);
-    border-top-right-radius: calc(var(--panel-border-top-right-radius) - 1px);
 }
