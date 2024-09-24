@@ -37,6 +37,7 @@ export class AppComponent {
     overlayRef.attach(this.portal);
   }
 
+  
 
 
   // // --------------------------------------------------------------GLOBAL POSITION (Template Portal)------------------------------------------------------------------------
